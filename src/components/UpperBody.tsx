@@ -30,7 +30,7 @@ export function UpperBody() {
         <span  style={{color: "#e07583"}} className ="UpperBodyText"> <b> <i>Public Goods </i> </b> </span>
     </div>
     
-    <img style ={{flex: "1", strokeDasharray: "500", maxHeight: '200px', minWidth: "450px"}}className="ImageLogo" src={design} />
+    <img style ={{flex: "1", strokeDasharray: "500", maxHeight: '200px', minWidth: "200px"}}className="ImageLogo" src={design} />
    
 </div>
   )

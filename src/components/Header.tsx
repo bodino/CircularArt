@@ -43,14 +43,16 @@ export function Header({
             <img className="ImageLogo" src={logo} />
           </div>
         </Link>
-     
-         
       </div>
 
-      <div className ="MenuOptionsFlexBox">
-        <div className ="MenuOptionsFlexBoxInside">
-          <div className="MenuOptions">Collections</div>
-          <div className="MenuOptions">Learn</div> 
+      <div className="MenuOptionsFlexBox">
+        <div className="MenuOptionsFlexBoxInside">
+          <Link to="/collections">
+            <div className="MenuOptions">Collections</div>
+          </Link>
+          <Link to="/learn">
+            <div className="MenuOptions">Learn</div>
+          </Link>
         </div>
 
         <button className="buttonColor" onClick={login}>
@@ -58,9 +60,6 @@ export function Header({
           {!connected === false ? 'Connected' : 'Click to Connect'}
         </button>
       </div>
-     
-       
-
     </div>
   )
 }

@@ -5,8 +5,15 @@ button, input[type="submit"], input[type="reset"] {
 
 
 	
+
 }
 
+
+
+
+a {
+    all: unset;
+}
 
 
 button:hover {
@@ -35,7 +42,7 @@ body {
 }
 
 
-
+/* @media (min-width: 705px) { */
 .App-header {
   background-color: #282c34;
   display: flex;
@@ -210,4 +217,15 @@ body {
 ;
 }
 
+svg .rainbowFill {
+  fill: black;
+  transition: fill .5s ease;
+}
 
+.socialIcon {
+
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* } */

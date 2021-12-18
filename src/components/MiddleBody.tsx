@@ -22,13 +22,13 @@ export function MiddleBody() {
 
   return (
     <div className="FlexBox">
-        <div className= "buttonColor" style={{backgroundColor: !allIsClicked ? '' : 'rgb(242, 217, 195)'   }} onClick={() => {setAllIsClicked(false)}}>
+        <div className= "buttonColor" style={{backgroundColor: !allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(false)}}>
             Past Collections
         </div>
         <div>
             $216,000,000 Raised For Public Goods
         </div>
-        <div className="buttonColor" style={{backgroundColor: allIsClicked ? '' : 'rgb(242, 217, 195)'   }} onClick={() => {setAllIsClicked(true)}}>
+        <div className="buttonColor" style={{backgroundColor: allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(true)}}>
             All Collections
         </div>
        

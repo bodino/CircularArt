@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import logo from './logo.svg'
 import { useState, useEffect } from 'react'
 import '../App.css'
@@ -18,18 +13,15 @@ import {
 import Web3 from 'web3'
 import { ethers } from 'ethers'
 import Header from '../components/Header'
-import UpperBody from '../components/UpperBody';
+import UpperBody from '../components/UpperBody'
 import { connectedState, marketState } from '../state'
-import MiddleBody from '../components/MiddleBody';
-import Collection from '../components/Collection';
+import MiddleBody from '../components/MiddleBody'
+import Collection from '../components/Collection'
 
 import OptiPunksLogo from '../OptiPunks.png'
 import testFindeza from '../testFindeza.png'
-import Footer from '../components/Footer';
-
-
-
-
+import Footer from '../components/Footer'
+import LandingPage from './LandingPage'
 
 var Eth = require('web3-eth')
 let web3
@@ -48,49 +40,24 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
 
   return (
     <Router>
-    <div className="Menu1">
-      <Header
-        login={logintoWallet}
-        wallet={wallet}
-        walletConnected={walletConnected}
-        setWalletConnected={setWalletConnected}
-      />
-
-      <UpperBody
-      />
-
-      <MiddleBody
-      />
-
-      <div className="AllCollectionFlexBox"> 
-        <Collection
-        NameOfCollection = "OptiPunks"
-        CollectionImage = {OptiPunksLogo}
-        CollectionCreationDate = "11/18/2021"
-        MaxMint = "10,000"
-        TotalMinted = "10,000"
-        AmountGeneratedForPublicGoods = "50 ETH"
+      <div className="Menu1">
+        <Header
+          login={logintoWallet}
+          wallet={wallet}
+          walletConnected={walletConnected}
+          setWalletConnected={setWalletConnected}
         />
-        <Collection
-        NameOfCollection = "Findeza"
-        CollectionImage = {testFindeza}
-        CollectionCreationDate = "11/18/2021"
-        MaxMint = "10,000"
-        TotalMinted = "10,000"
-        AmountGeneratedForPublicGoods = "50 ETH"
-        />
-        <Collection
-        NameOfCollection = "OptiPunks"
-        CollectionImage = {OptiPunksLogo}
-        CollectionCreationDate = "11/18/2021"
-        MaxMint = "10,000"
-        TotalMinted = "10,000"
-        AmountGeneratedForPublicGoods = "50 ETH"
-        />
-        
-      </div> 
-      <Footer/>
-    </div>
+        <Routes>
+          <Route path="/"  element={<LandingPage/>}/>
+            
+         
+
+          <Route path="/learn"/>
+
+          <Route path="/collections"/>
+
+        </Routes>
+      </div>
     </Router>
   )
 }
