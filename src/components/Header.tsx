@@ -57,7 +57,7 @@ export function Header({
 
         <button className="buttonColor" onClick={login}>
           {' '}
-          {!connected === false ? 'Connected' : 'Click to Connect'}
+          {!connected === false ? 'Connected' : 'Connect'}
         </button>
       </div>
     </div>

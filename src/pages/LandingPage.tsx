@@ -30,7 +30,8 @@ var autoSelectWallet = 'metamask'
 export function LandingPage() {
 
   return (
-      <div className="Menu1">
+      <div className="Menu2">
+          <div>
             <UpperBody />
 
             <MiddleBody />
@@ -60,6 +61,8 @@ export function LandingPage() {
                 TotalMinted="10,000"
                 AmountGeneratedForPublicGoods="50 ETH"
               />
+
+              </div>
             </div>
             <Footer />
       </div>

@@ -49,6 +49,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+ 
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -76,6 +77,9 @@ body {
   justify-content: space-between;
   align-content:center;
   align-items: center;
+  justify-self: flex-end;
+  min-height: 80px;
+  /* align-self: flex-end; */
   
   border-bottom: 1px solid rgb(45, 45, 61);
 
@@ -114,6 +118,7 @@ body {
 
 .ImageLogo {
   width: 100px;
+  
 }
 
 .MenuOptionsFlexBox {
@@ -192,7 +197,6 @@ body {
   margin-top: 20px;
   padding-bottom: 20px;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgb(45, 45, 61);
   justify-content: center;
 
 }
@@ -203,8 +207,8 @@ body {
   align-content:center;
   align-items: center;
   text-align: left;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 18px;
+  padding-right: 18px;
   padding-top: 30px;
   margin-top: 20px;
   padding-bottom: 20px;
@@ -213,6 +217,8 @@ body {
   margin: 5px;
 
   justify-content: space-between;
+  background-color: peachpuff;
+  border-radius: 3px;
   height: 480px
 ;
 }
@@ -228,4 +234,134 @@ svg .rainbowFill {
   transform: scale(1.2);
 }
 
+.Menu2{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+ 
+  text-align: left;
+  
+  justify-content: space-between;
+
+
+}
+.FooterProps{
+  
+  width: 100vw;
+
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  align-content:center;
+  align-items: center;
+  justify-self: flex-end;
+
+  border-top: 1px solid rgb(45, 45, 61);
+
+
+}
+
+.Menu1{
+  height: 100vh;
+  display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.MarginRight{
+  margin-right: 50px;
+}
+
+.ImageCss{
+    flex: 1 1 0%;
+    stroke-dasharray: 500;
+    max-height: 200px;
+    min-width: 200px;
+
+}
+
+
+
 /* } */
+@media (max-width: 526px) {
+  .AppName{
+    margin-left: 0px;
+  }
+  .MenuOptionsFlexBox{
+    margin-right: 0px;
+    
+  }
+  .Header{justify-content: center;}
+  .MenuOptions{
+    margin-right: 0;
+  }
+
+  .MenuOptionsFlexBoxInside{
+    margin-right:10px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 895px) {
+  .FlexBox{
+    flex-direction: column;
+    text-align: center;
+  }
+  .MarginRight{
+    margin-right: 0px;
+  }
+  .ImageCss{
+    width:370px
+  }
+}
+
+@media (min-width: 1380px) { 
+  .Menu1{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    align-items: center;
+  }
+
+  .Header{
+    display: flex;
+    width: 1380px;
+    flex-direction: row;
+    
+    
+    justify-content: space-between;
+    align-content:center;
+    align-items: center;
+    justify-self: flex-end;
+    /* align-self: flex-end; */
+    
+    border-bottom: 1px solid rgb(45, 45, 61);
+  
+  }
+
+  .FooterProps{
+    
+    width: 1380px;
+  
+    display: flex;
+    height: 80px;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    /* align-content:center; */
+    /* align-items: center; */
+    /* justify-self: flex-end; */
+  
+    border-top: 1px solid rgb(45, 45, 61);
+  
+  
+  }
+
+  
+
+
+
+}

@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
   
-    <div className = "Header">
+    <div className = "FooterProps">
         <div className="MenuOptions">  Circular Art</div>
         <div className="MenuOptionsFlexBox">
        

@@ -19,7 +19,7 @@ var autoSelectWallet = 'metamask'
 export function UpperBody() {
   return (
     <div className="FlexBox">
-        <div style={{ marginRight: "50px"}} >
+        <div className="MarginRight" >
         <span className ="UpperBodyText">
             <b> Generative Art </b>
         </span>
@@ -30,7 +30,7 @@ export function UpperBody() {
         <span  style={{color: "#e07583"}} className ="UpperBodyText"> <b> <i>Public Goods </i> </b> </span>
     </div>
     
-    <img style ={{flex: "1", strokeDasharray: "500", maxHeight: '200px', minWidth: "200px"}}className="ImageLogo" src={design} />
+    <img className="ImageLogo ImageCss" src={design} />
    
 </div>
   )
