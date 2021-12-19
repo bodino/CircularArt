@@ -12,7 +12,7 @@ export function Footer() {
   return (
   
     <div className = "FooterProps">
-        <div className="MenuOptions">  Circular Art</div>
+        <div className="MenuOptions" style={{marginLeft: '40px'}}>  Circular Art</div>
         <div className="MenuOptionsFlexBox">
        
         <a href="https://twitter.com/OptiPunk" style={{height:'40px', width:"40px"}} >

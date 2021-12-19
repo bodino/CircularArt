@@ -25,7 +25,7 @@ export function MiddleBody() {
         <div className= "buttonColor" style={{backgroundColor: !allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(false)}}>
             Past Collections
         </div>
-        <div>
+        <div className="DisapearingText">
             $216,000,000 Raised For Public Goods
         </div>
         <div className="buttonColor" style={{backgroundColor: allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(true)}}>

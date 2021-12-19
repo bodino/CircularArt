@@ -22,6 +22,7 @@ import OptiPunksLogo from '../OptiPunks.png'
 import testFindeza from '../testFindeza.png'
 import Footer from '../components/Footer'
 import LandingPage from './LandingPage'
+import LearnPage from './LearnPage'
 
 var Eth = require('web3-eth')
 let web3
@@ -52,7 +53,7 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
             
          
 
-          <Route path="/learn"/>
+          <Route path="/learn" element={<LearnPage/>}/>
 
           <Route path="/collections"/>
 

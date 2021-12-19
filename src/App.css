@@ -247,8 +247,6 @@ svg .rainbowFill {
 }
 .FooterProps{
   
-  width: 100vw;
-
   display: flex;
   height: 80px;
   flex-direction: row;
@@ -315,6 +313,9 @@ svg .rainbowFill {
   .ImageCss{
     width:370px
   }
+  .DisapearingText{
+    display: none;
+  }
 }
 
 @media (min-width: 1380px) { 
@@ -356,9 +357,9 @@ svg .rainbowFill {
     /* justify-self: flex-end; */
   
     border-top: 1px solid rgb(45, 45, 61);
-  
-  
   }
+
+ 
 
   
 

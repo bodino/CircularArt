@@ -32,7 +32,7 @@ export function Header({
     }
   }
   useEffect(() => {
-    setTimeout(test, 20)
+    setTimeout(test, 30)
   })
 
   return (
