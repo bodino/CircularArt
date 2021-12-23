@@ -17,18 +17,18 @@ const usdcAddress = '0x2791bca1f2de4661ed88a30c99a7a9449aa84174'
 var autoSelectWallet = 'metamask'
 
 
-export function MiddleBody() {
+export function MiddleBody({setallCollections}:any) {
     var [allIsClicked, setAllIsClicked] = useState(true);
 
   return (
-    <div className="FlexBox">
-        <div className= "buttonColor" style={{backgroundColor: !allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(false)}}>
+    <div className="FlexBoxMidText">
+        <div className= "buttonColor" style={{backgroundColor: !allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(false); setallCollections(false)}}>
             Past Collections
         </div>
         <div className="DisapearingText">
             $216,000,000 Raised For Public Goods
         </div>
-        <div className="buttonColor" style={{backgroundColor: allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(true)}}>
+        <div className="buttonColor" style={{backgroundColor: allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(true); setallCollections(true)}}>
             All Collections
         </div>
        

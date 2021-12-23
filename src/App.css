@@ -188,12 +188,13 @@ body {
 
 .AllCollectionFlexBox {
   display: flex;
+  max-width: 1380px;
   flex-direction: row;
   align-content:center;
   align-items: center;
 
-  padding-left: 60px;
-  padding-right: 60px;
+  /* padding-left: 60px;
+  padding-right: 60px; */
   margin-top: 20px;
   padding-bottom: 20px;
   flex-wrap: wrap;
@@ -233,6 +234,7 @@ svg .rainbowFill {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
 
 .Menu2{
   flex: 1;
@@ -279,6 +281,20 @@ svg .rainbowFill {
     min-width: 200px;
 
 }
+.FlexBoxMidText{
+  display: flex;
+  flex-direction: row;
+  align-content:center;
+  align-items: center;
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(45, 45, 61);
+  justify-content: space-between;
+}
 
 
 
@@ -299,6 +315,9 @@ svg .rainbowFill {
   .MenuOptionsFlexBoxInside{
     margin-right:10px;
     flex-direction: column;
+  }
+  .FlexBoxMidText{
+    justify-content: space-around;
   }
 }
 

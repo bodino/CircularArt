@@ -18,8 +18,11 @@ import { connectedState, marketState } from '../state'
 import MiddleBody from '../components/MiddleBody'
 import Collection from '../components/Collection'
 
-import OptiPunksLogo from '../OptiPunks.png'
-import testFindeza from '../testFindeza.png'
+import OptiPunksLogo from '../art/OptiPunks.png'
+import testFindeza from '../art/testFindeza.png'
+import octavian from '../art/octavian.png'
+import agustus from '../art/agustus.png'
+import soon from '../art/Soon.png'
 import Footer from '../components/Footer'
 
 var Eth = require('web3-eth')
@@ -28,45 +31,59 @@ const usdcAddress = '0x2791bca1f2de4661ed88a30c99a7a9449aa84174'
 var autoSelectWallet = 'metamask'
 
 export function LandingPage() {
+  const [allCollections, setallCollections] = useState(true)
 
   return (
-      <div className="Menu2">
-          <div>
-            <UpperBody />
+    <div className="Menu2">
+      <div>
+        <UpperBody />
 
-            <MiddleBody />
+        <MiddleBody 
+        setallCollections={setallCollections}
+        />
+        {allCollections ? (
+          <div className="AllCollectionFlexBox">
+            <Collection
+              NameOfCollection="OptiPunks"
+              CollectionImage={OptiPunksLogo}
+              CollectionCreationDate="11/18/2021"
+              MaxMint="10,000"
+              TotalMinted="10,000"
+              AmountGeneratedForPublicGoods="50 ETH"
+            />
+            <Collection
+              NameOfCollection="Octavas"
+              CollectionImage={octavian}
+              CollectionCreationDate="12/30/2021"
+              MaxMint="981"
+              TotalMinted="0"
+              AmountGeneratedForPublicGoods=""
+            />
 
-            <div className="AllCollectionFlexBox">
-              <Collection
-                NameOfCollection="OptiPunks"
-                CollectionImage={OptiPunksLogo}
-                CollectionCreationDate="11/18/2021"
-                MaxMint="10,000"
-                TotalMinted="10,000"
-                AmountGeneratedForPublicGoods="50 ETH"
-              />
-              <Collection
-                NameOfCollection="Findeza"
-                CollectionImage={testFindeza}
-                CollectionCreationDate="11/18/2021"
-                MaxMint="10,000"
-                TotalMinted="10,000"
-                AmountGeneratedForPublicGoods="50 ETH"
-              />
-              <Collection
-                NameOfCollection="OptiPunks"
-                CollectionImage={OptiPunksLogo}
-                CollectionCreationDate="11/18/2021"
-                MaxMint="10,000"
-                TotalMinted="10,000"
-                AmountGeneratedForPublicGoods="50 ETH"
-              />
-
-              </div>
-            </div>
-            <Footer />
+            <Collection
+              NameOfCollection="Unannounced"
+              CollectionImage={soon}
+              CollectionCreationDate="Soon"
+              MaxMint="!@#$%"
+              TotalMinted="0"
+              AmountGeneratedForPublicGoods=""
+            />
+          </div>
+        ) : (
+          <div className="AllCollectionFlexBox">
+            <Collection
+              NameOfCollection="OptiPunks"
+              CollectionImage={OptiPunksLogo}
+              CollectionCreationDate="11/18/2021"
+              MaxMint="10,000"
+              TotalMinted="10,000"
+              AmountGeneratedForPublicGoods="50 ETH"
+            />
+          </div>
+        )}
       </div>
-
+      <Footer />
+    </div>
   )
 }
 

@@ -17,6 +17,7 @@ export function Collection({NameOfCollection,CollectionImage,CollectionCreationD
     var [allIsClicked, setAllIsClicked] = useState(true);
 
   return (
+    <Link to={"/"+NameOfCollection}>
     <div className = "FlexIndividualCollection">
         <img style={{width: "340px"}}src={CollectionImage}></img>   
         <div> <b> <i>{NameOfCollection}  </i></b>  </div>
@@ -28,6 +29,7 @@ export function Collection({NameOfCollection,CollectionImage,CollectionCreationD
 
        
     </div>
+    </Link>
   )
 }
 

@@ -23,6 +23,8 @@ import testFindeza from '../testFindeza.png'
 import Footer from '../components/Footer'
 import LandingPage from './LandingPage'
 import LearnPage from './LearnPage'
+import IndividualCollectionPage from '../components/IndividualCollectionPage'
+
 
 var Eth = require('web3-eth')
 let web3
@@ -50,6 +52,8 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
         />
         <Routes>
           <Route path="/"  element={<LandingPage/>}/>
+
+          <Route path="/:id" element={<IndividualCollectionPage/>}/>
             
          
 
