@@ -47,8 +47,8 @@ export function Header({
 
       <div className="MenuOptionsFlexBox">
         <div className="MenuOptionsFlexBoxInside">
-          <Link to="/collections">
-            <div className="MenuOptions">Collections</div>
+          <Link to="/profile">
+            <div className="MenuOptions">Profile</div>
           </Link>
           <Link to="/learn">
             <div className="MenuOptions">Learn</div>

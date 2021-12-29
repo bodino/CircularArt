@@ -24,7 +24,7 @@ import Footer from '../components/Footer'
 import LandingPage from './LandingPage'
 import LearnPage from './LearnPage'
 import IndividualCollectionPage from '../components/IndividualCollectionPage'
-
+import ProfilePage from '../components/ProfilePage'
 
 var Eth = require('web3-eth')
 let web3
@@ -59,7 +59,7 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
 
           <Route path="/learn" element={<LearnPage/>}/>
 
-          <Route path="/collections"/>
+          <Route path="/profile" element={<ProfilePage/>}/>
 
         </Routes>
       </div>

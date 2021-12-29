@@ -244,8 +244,6 @@ svg .rainbowFill {
   text-align: left;
   
   justify-content: space-between;
-
-
 }
 .FooterProps{
   
@@ -294,6 +292,24 @@ svg .rainbowFill {
   flex-wrap: wrap;
   border-bottom: 1px solid rgb(45, 45, 61);
   justify-content: space-between;
+}
+
+.FlexBoxLearn{
+  
+  display: flex;
+  max-width: 1260px;
+  flex-direction: column;
+  align-content:center;
+  align-items: center;
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(45, 45, 61);
+  justify-content: space-between;
+  
 }
 
 
