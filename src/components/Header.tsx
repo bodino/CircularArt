@@ -9,7 +9,7 @@ import { ethers } from 'ethers'
 import logo from '../CircularArtLogo.png'
 import { Link } from 'react-router-dom'
 
-import { connectedState } from '../state'
+import { connectedState, userAddress } from '../state'
 
 var Eth = require('web3-eth')
 let web3
@@ -21,19 +21,24 @@ export function Header({
   wallet,
   walletConnected,
   setWalletConnected,
+  findUsersnfts
 }: any) {
   const [connected, setConnected] = useRecoilState<any>(connectedState)
+  const [address, setAddress] = useRecoilState<any>(userAddress)
 
   function test() {
     var address = wallet.getState().address
+    setAddress(address);
+
     console.log(address)
     if (address > 2) {
-      setConnected(true)
+      setConnected(true);
+      findUsersnfts(address);
     }
   }
   useEffect(() => {
-    setTimeout(test, 30)
-  })
+    setTimeout(test, 50)
+  },[])
 
   return (
     <div className="Header">

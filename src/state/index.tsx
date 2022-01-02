@@ -17,3 +17,8 @@ export const isItLoading = atom<any>({
     key: "isLoading",
     default: true
 })
+
+export const userAddress = atom<any>({
+    key: "userAddress",
+    default: true
+})

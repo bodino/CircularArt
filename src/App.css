@@ -159,6 +159,22 @@ body {
 
 }
 
+.ShowOptions {
+  padding-inline: 10px;
+  border-radius: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  transition: all .15s ease-in-out!important;
+}
+
+.ShowOptions:hover {
+  color:rgb(247, 247, 247);
+  background-color: rgb(18, 18, 26);
+}
+
 .FlexBox{
   display: flex;
   flex-direction: row;
@@ -185,13 +201,23 @@ body {
 }
 
 /* CollectionStartsHere */
-
+.FlexBoxMarkets{
+  display: flex;
+  flex-direction: row;
+  align-content:center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:18px;
+}
 .AllCollectionFlexBox {
   display: flex;
   max-width: 1380px;
   flex-direction: row;
   align-content:center;
-  align-items: center;
+  align-items: left;
+  overflow-y: scroll;
+  
 
   /* padding-left: 60px;
   padding-right: 60px; */
@@ -200,6 +226,23 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 
+}
+
+.AllProfileCollectionFlexBox{
+  display: flex;
+  width: 1380px;
+  flex-direction: row;
+  align-content:left;
+  align-items: left;
+  overflow-y: scroll;
+  
+
+  /* padding-left: 60px;
+  padding-right: 60px; */
+  margin-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .FlexIndividualCollection{
@@ -248,7 +291,7 @@ svg .rainbowFill {
 .FooterProps{
   
   display: flex;
-  height: 80px;
+  min-height: 80px;
   flex-direction: row;
   
   justify-content: space-between;
@@ -312,6 +355,30 @@ svg .rainbowFill {
   
 }
 
+.FlexBoxUser{
+  display: flex;
+  max-width: 1260px;
+  flex-direction: column;
+  align-content:center;
+  align-items: center;
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(45, 45, 61);
+  justify-content: space-between;
+}
+
+.FlexBoxColum{
+  display: flex;
+  flex-direction: column;
+  flex: 0 1;
+  border-right: 1px solid rgb(45, 45, 61);
+  
+}
+
 
 
 /* } */
@@ -354,6 +421,7 @@ svg .rainbowFill {
 }
 
 @media (min-width: 1380px) { 
+
   .Menu1{
     display: flex;
     flex-direction: column;
@@ -376,6 +444,10 @@ svg .rainbowFill {
     
     border-bottom: 1px solid rgb(45, 45, 61);
   
+  }
+
+  .Menu2{
+    width: 1380px;
   }
 
   .FooterProps{

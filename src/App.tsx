@@ -33,7 +33,7 @@ const wallets = [
     walletName: 'walletConnect',
     preferred: true,
     rpc: {
-      ['137']: 'https://polygon-mainnet.g.alchemy.com/v2/wNblPFs6UL8D6V1GQ-8-k_cBWfEboHiW',
+      ['10']: 'https://polygon-mainnet.g.alchemy.com/v2/wNblPFs6UL8D6V1GQ-8-k_cBWfEboHiW',
     },
   },
 ]
@@ -41,20 +41,24 @@ const wallets = [
  
 
 function App() {
+
   const[walletConnected, setWalletConnected] = useState<any>(0)
   // const [connected, setConnected] = useRecoilState<any>(connectedState)
-
+  var[walletProvider, setWalletProvider] = useState<any>(0)
 
   const onboard = Onboard({
     dappId: '3bbe9d54-ac92-483d-92b0-dbaebe33768e', // [String] The API key created by step one above
-    networkId: 137, // [Integer] The Ethereum network ID your Dapp uses.
+    networkId: 10, // [Integer] The Ethereum network ID your Dapp uses.
     darkMode: true,
     subscriptions: {
       wallet: (wallet: any) => {
         provider = new ethers.providers.Web3Provider(wallet.provider)
+      
         console.log(provider)
         signer = provider.getSigner()
         console.log(`connected to ${wallet.name}`)
+        console.log(provider);
+        
         window.localStorage.setItem('selectedWallet', wallet.name)
       },
       
@@ -68,6 +72,7 @@ function App() {
 
   useEffect(() => {
     async function loadWallet() {
+     
       const previouslySelectedWallet = window.localStorage.getItem(
         'selectedWallet',
       )
@@ -91,12 +96,14 @@ function App() {
   }
 
   return (
+    
     <div className="App">
       <Menu 
      
       wallet ={onboard}
       walletConnected = {walletConnected}
       setWalletConnected = {setWalletConnected}
+
       />
      
     </div>

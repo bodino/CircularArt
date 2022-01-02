@@ -82,7 +82,6 @@ export function LandingPage() {
           </div>
         )}
       </div>
-      <Footer />
     </div>
   )
 }

@@ -14,11 +14,17 @@ export function IndividualCollectionPage() {
 
   return (
   
-    <div className="FlexBox">
-        <div className="MarginRight">
+    <div style={{flexDirection:"row", justifySelf: "left", maxWidth:"1380px", justifyContent:"center"}}className="Menu2">
+      <div className="FlexBoxColum">
+        <img style={{maxWidth:"450px"}} src={octavian}></img>
+      
+      </div>
+
+      <div style={{width:'300px', height:'400px'}}className="FlexIndividualCollection">
         {id}
         </div>
-        <img style={{maxWidth:"500px"}} src={octavian}></img>
+     
+
     </div>
    
   )
