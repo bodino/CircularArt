@@ -20,9 +20,9 @@ import Collection from '../components/Collection'
 
 import OptiPunksLogo from '../art/OptiPunks.png'
 import testFindeza from '../art/testFindeza.png'
-import octavian from '../art/octavian.png'
+import octavian from '../art/octavas.png'
 import agustus from '../art/agustus.png'
-import soon from '../art/Soon.png'
+import soon from '../art/Unannounced.png'
 import Footer from '../components/Footer'
 
 var Eth = require('web3-eth')

@@ -76,7 +76,7 @@ function TransferModal({item, wallet}:any) {
   return (
     <div>
 
-      <button onClick={openModal}>Transfer</button>
+      <a style={{fontSize:"15px", marginRight:"0px"}}className="ShowOptions" onClick={openModal}>Transfer</a>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

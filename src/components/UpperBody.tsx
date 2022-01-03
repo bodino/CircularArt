@@ -25,6 +25,7 @@ export function UpperBody() {
         </span>
         <br></br>
         <br></br>
+        
         <span className ="UpperBodyText">
            <b> Funding  </b> </span>
         <span  style={{color: "#e07583"}} className ="UpperBodyText"> <b> <i>Public Goods </i> </b> </span>
