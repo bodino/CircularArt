@@ -32,12 +32,12 @@ export function Header({
 
     console.log(address)
     if (address > 2) {
-      setConnected(true);
       findUsersnfts(address);
+      setConnected(true);
     }
   }
   useEffect(() => {
-    setTimeout(test, 50)
+    setTimeout(test, 500)
   },[])
 
   return (

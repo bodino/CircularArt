@@ -93,7 +93,7 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
         <Routes>
           <Route path="/"  element={<LandingPage/>}/>
 
-          <Route path="/:id" element={<IndividualCollectionPage/>}/>
+          <Route path="/:id" element={<IndividualCollectionPage wallet={wallet}/>}/>
             
          
 

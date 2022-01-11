@@ -11,14 +11,49 @@ import MapAllMints from './MapAllMints'
 import { OptiPunks } from '../state/collections'
 import { Unannounced } from '../state/collections'
 import { Octavas } from '../state/collections'
+import { ethers } from 'ethers'
+import { ToastContainer, toast } from 'react-toastify';
+
+import OctavasRender from '../renderArt/OctavasRender'
+import NftContract from '../contracts/nft.json'
 
 
-export function IndividualCollectionPage() {
+export function IndividualCollectionPage({wallet}:any) {
   const { id } = useParams()
   var [renderNow, setRenderNow] = useState<any>();
   var [info, setInfo] = useState<any>(OptiPunks);
 
   var img;
+
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [mintAmount, setMintAmount] = useState(1)
+
+  async function transferNFt() {
+      
+    if (mintAmount >= 1 && mintAmount <= 20){
+        
+        var provider = new ethers.providers.Web3Provider(wallet.getState().wallet.provider)
+        const contract = new ethers.Contract(info.address, NftContract.abi, provider.getSigner() );
+        console.log(wallet.getState().wallet);
+        var tx =  await contract.mintOptiPunk(mintAmount);
+
+    } else {
+        toast("Max Mint Is 20")
+    }
+
+  }
+
+  const handleAddressChange = (event:any) => {
+    setMintAmount(event.target.value)
+    console.log(event.target.value);
+  };
+
+  const handleSubmit = (event:any) => {
+    event.preventDefault();
+    console.log("hi");
+    transferNFt()
+  };
 
   useEffect(() => {
     if (id == "OptiPunks"){
@@ -30,9 +65,9 @@ export function IndividualCollectionPage() {
     }  else if (id == "Octavas"){
       setRenderNow(Octavasimg);
       setInfo(Octavas);
-
-
     }
+
+    
    
   }, );
   return (
@@ -45,49 +80,63 @@ export function IndividualCollectionPage() {
       }}
       className="Menu2"
     >
-      <div style={{ justifyContent: 'center' }}className="FlexBox">
-        <div style={{ height: '450px' }}className="FlexBoxColum">
+     <ToastContainer />
+     
+      <div style={{ justifyContent: 'center', borderBottom: '0px' }}className="FlexBox">
+        <div style={{ height: '500px' }}className="FlexBoxColum">
           {}
-          <img style={{ height: '450px' }} src={renderNow}></img>
+          {info.type == "live" ? <OctavasRender/>:<img style={{ height: '500px' }} src={renderNow}></img> }
+          
         </div>
 
         <div
-          style={{ width: '300px', height: '400px' }}
+          style={{ width: '300px', height: '450px', paddingTop: '28px' }}
           className="FlexIndividualCollection"
         >
           <b> {id} </b>
           
-            <form>
+            <form onSubmit={handleSubmit}>
             <div style={{borderRight:"0px"}}className="FlexBoxColum">
-              <input style={{marginRight:"0px", width:"110px"}} className="ShowOptions" type="number"  max="20" min="1" placeholder="1"/>
+              <input style={{marginRight:"0px", width:"110px"}} onChange={handleAddressChange} className="ShowOptions" type="number"  max="20" min="1" placeholder="1"/>
               <br/>
               <input style={{marginRight:"0px"}}className="ShowOptions" type="submit" value="Mint"/> 
               </div>
             </form>
      
-          <div style={{width:"100px"}}>
+          <div className="Border">
+
             <div className="IndividualText">
-              Artist
+              <div>
+              <b>Artist:</b>
+              </div>
+              <div >
+              {info.artist}
             </div>
+            </div>
+           
             <div className="IndividualText">
-              <div>Total </div>
+              <div> <b>Total:</b> </div>
               <div>{info.total}</div>
             </div>
             <div className="IndividualText">
-             <div>Minted</div>
+             <div><b>Minted:</b></div>
              <div> {info.minted}</div>
             </div>
             <div>
-              
+          
             </div>
+         
           </div>
+          
         </div>
+        {/* <div  style={{ maxWidth: '760px', height: '20px' }} className="FlexIndividualCollection">
+        {info.description}
+        </div> */}
       </div>
-      <div>
-        <MapAllMints
-        info={info}/>
-      </div>
-      {info.date}
+      
+        {!info.ipfslink ? "": <> <MapAllMints info={info}/> </> }
+   
+  
     </div>
   )
 }

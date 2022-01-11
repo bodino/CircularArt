@@ -236,14 +236,30 @@ body {
   align-content:left;
   align-items: left;
   overflow-y: scroll;
+  border-top: 1px solid rgb(45, 45, 61);
   
 
   /* padding-left: 60px;
   padding-right: 60px; */
-  margin-top: 20px;
+  padding-top:18px;
   padding-bottom: 20px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.ArtLarge{
+  width: 500px;
+  height:500px; 
+}
+
+.ArtSmall{
+  width: 240px;
+  height:240px; 
+}
+
+.p5Canvas{
+  width: inherit !important;
+  height: inherit !important;
 }
 
 .FlexIndividualCollection{
@@ -252,9 +268,7 @@ body {
   align-content:center;
   align-items: center;
   text-align: left;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 30px;
+  padding: 0px 0px 20px;
   margin-top: 20px;
   padding-bottom: 20px;
   flex-wrap: wrap;
@@ -266,6 +280,10 @@ body {
   border-radius: 3px;
   height: 480px
 ;
+}
+
+.Border{
+  border-top: 1px solid rgb(45, 45, 61) !important
 }
 
 svg .rainbowFill {
@@ -381,6 +399,7 @@ svg .rainbowFill {
 }
 .IndividualText{
   display: flex;
+  width: 200px;
   flex-direction: row;
   justify-content: space-between;
 }

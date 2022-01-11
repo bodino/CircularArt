@@ -29,13 +29,13 @@ const wallets = [
   { walletName: 'coinbase', preferred: true },
   { walletName: 'metamask', preferred: true },
   { walletName: 'frame', preferred: true },
-  {
-    walletName: 'walletConnect',
-    preferred: true,
-    rpc: {
-      ['10']: 'https://polygon-mainnet.g.alchemy.com/v2/wNblPFs6UL8D6V1GQ-8-k_cBWfEboHiW',
-    },
-  },
+  // {
+    // walletName: 'walletConnect',
+    // preferred: true,
+    // rpc: {
+    //   ['10']: 'https://polygon-mainnet.g.alchemy.com/v2/wNblPFs6UL8D6V1GQ-8-k_cBWfEboHiW',
+    // },
+  // },
 ]
 
  
