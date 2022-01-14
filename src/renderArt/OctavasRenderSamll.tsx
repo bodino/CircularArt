@@ -12,7 +12,7 @@ export function OctavasRenderSmall({pushedseed}:any) {
         setloading(false);
       }
       useEffect(() => {
-        setTimeout(renderAnimation, 50)
+        setTimeout(renderAnimation, 10)
   
        }, []);
       var scl = 12;
@@ -54,7 +54,7 @@ export function OctavasRenderSmall({pushedseed}:any) {
         var BackgroundTypesArray:any = [BackgroundColor.Black, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.White, BackgroundColor.Red, BackgroundColor.Blue]
 
         var colorbackground:any;
-      var [loading, setloading] = useState(true);
+      var [loading, setloading] = useState(false);
 
     let setup = (p5:any, canvasParentRef:any) => {
 

@@ -19,7 +19,9 @@ export function Collection({NameOfCollection,CollectionImage,CollectionCreationD
   return (
     <Link to={"/"+NameOfCollection}>
     <div className = "FlexIndividualCollection">
-        <img style={{width: "360px"}}src={CollectionImage}></img>   
+        <div style={{width: "360px", height:"360px"}}>
+        <img style={{width: "360px"}}src={CollectionImage}></img>  
+        </div> 
         <div> <b> <i>{NameOfCollection}  </i></b>  </div>
         <div> {CollectionCreationDate} </div>
         <div>{TotalMinted} / {MaxMint} Minted</div>

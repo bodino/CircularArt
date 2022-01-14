@@ -54,7 +54,7 @@ export function OctavasRender() {
         var BackgroundTypesArray:any = [BackgroundColor.Black, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.White, BackgroundColor.Red, BackgroundColor.Blue]
 
         var colorbackground:any;
-      var [loading, setloading] = useState(true);
+      var [loading, setloading] = useState(false);
 
     let setup = (p5:any, canvasParentRef:any) => {
 

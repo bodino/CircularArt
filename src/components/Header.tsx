@@ -25,7 +25,27 @@ export function Header({
 }: any) {
   const [connected, setConnected] = useRecoilState<any>(connectedState)
   const [address, setAddress] = useRecoilState<any>(userAddress)
+  const [reRun, setreRun] = useState(true)
 
+  useEffect(() => {
+  
+    if (connected){
+      updateOnNewConnect();
+    }
+    
+    setTimeout(setsetreRun, 2000);
+  },[reRun] );
+
+    function setsetreRun(){
+      setreRun(!reRun)
+    }
+  function updateOnNewConnect(){
+    var newAddress = wallet.getState().address
+    if (newAddress != address){
+      setAddress(newAddress)
+      findUsersnfts(newAddress);
+    }
+  }
   function test() {
     var address = wallet.getState().address
     setAddress(address);
@@ -34,11 +54,12 @@ export function Header({
     if (address > 2) {
       findUsersnfts(address);
       setConnected(true);
+      console.log(wallet.getState())
     }
   }
   useEffect(() => {
     setTimeout(test, 500)
-  },[])
+  },[wallet.getState().address])
 
   return (
     <div className="Header">

@@ -191,6 +191,20 @@ body {
   justify-content: space-between;
   
 }
+.FlexBoxMiddleImage{
+  display: flex;
+  flex-direction: row;
+  align-content:center;
+  align-items: center;
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(45, 45, 61);
+  justify-content: space-between;
+}
 
 .UpperBodyText{
   font-size: 38px;
@@ -282,6 +296,26 @@ body {
 ;
 }
 
+.FlexIndividualCollectionMainPage{
+  display: flex;
+  flex-direction: column;
+  align-content:center;
+  align-items: center;
+  text-align: left;
+  padding: 0px 0px 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  border: 1px solid rgb(45, 45, 61);
+  margin: 5px;
+
+  justify-content: space-between;
+  background-color: peachpuff;
+  border-radius: 3px;
+  height: 480px
+;
+}
+
 .Border{
   border-top: 1px solid rgb(45, 45, 61) !important
 }
@@ -339,7 +373,9 @@ svg .rainbowFill {
     stroke-dasharray: 500;
     max-height: 200px;
     min-width: 200px;
-
+}
+.TopImageDiv{
+  height: 200px;
 }
 .FlexBoxMidText{
   display: flex;
@@ -404,8 +440,13 @@ svg .rainbowFill {
   justify-content: space-between;
 }
 
+.UserMarketImg{
+  
+  width: 240px;
+  height:240px;
+}
 
-/* } */
+
 @media (max-width: 526px) {
   .AppName{
     margin-left: 0px;
@@ -428,6 +469,17 @@ svg .rainbowFill {
   }
 }
 
+@media (max-width: 630px) {
+  .Menu2{flex-direction: column !important}
+  .FlexBoxUser{justify-content: center !important;
+  flex-direction: row !important; }
+  .AllProfileCollectionFlexBox{
+    max-width: 1380px !important;
+    width: initial;
+  }
+}
+
+
 @media (max-width: 895px) {
   .FlexBox{
     flex-direction: column;
@@ -439,9 +491,32 @@ svg .rainbowFill {
   .ImageCss{
     width:370px
   }
+  .TopImageDiv{
+    width:370px;
+    height:82.22px;
+  }
   .DisapearingText{
     display: none;
   }
+}
+
+@media (max-width: 940px) {
+  /* .FlexBoxColum{
+    height:300px !important;
+    width: 300px  !important;
+  } */
+  .ArtLarge{
+    height:360px !important;
+    width:360px !important;
+  }
+  .FlexIndividualCollectionMainPage{
+    width: 360px !important;
+    height:200px !important;
+  }
+  .FlexBoxMiddleImage {
+    flex-direction: column;
+    text-align: center;
+}
 }
 
 @media (min-width: 1380px) { 

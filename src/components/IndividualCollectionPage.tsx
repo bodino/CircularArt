@@ -82,28 +82,30 @@ export function IndividualCollectionPage({wallet}:any) {
     >
      <ToastContainer />
      
-      <div style={{ justifyContent: 'center', borderBottom: '0px' }}className="FlexBox">
+      <div style={{ justifyContent: 'center', borderBottom: '0px' }}className="FlexBoxMiddleImage">
         <div style={{ height: '500px' }}className="FlexBoxColum">
           {}
-          {info.type == "live" ? <OctavasRender/>:<img style={{ height: '500px' }} src={renderNow}></img> }
+          {info.type == "live" ? <OctavasRender/>:<img className="ArtLarge" src={renderNow}></img> }
           
         </div>
 
         <div
           style={{ width: '300px', height: '450px', paddingTop: '28px' }}
-          className="FlexIndividualCollection"
+          className="FlexIndividualCollectionMainPage"
         >
           <b> {id} </b>
           
             <form onSubmit={handleSubmit}>
             <div style={{borderRight:"0px"}}className="FlexBoxColum">
-              <input style={{marginRight:"0px", width:"110px"}} onChange={handleAddressChange} className="ShowOptions" type="number"  max="20" min="1" placeholder="1"/>
-              <br/>
-              <input style={{marginRight:"0px"}}className="ShowOptions" type="submit" value="Mint"/> 
+            {info.status == "Soon" ? "":<input style={{marginRight:"0px", width:"110px"}} onChange={handleAddressChange} className="ShowOptions" type="number"  max="20" min="1" placeholder="1"/>}
+              {info.status == "Soon" ? <div style={{marginRight:"0px"}}className="ShowOptions"> Mint Soon</div> :""}
+              
+              {info.status == "Soon" ? "": <br/>}
+              {info.status == "Soon" ? "": <input style={{marginRight:"0px"}}className="ShowOptions" type="submit" value="Mint"/> }
               </div>
             </form>
      
-          <div className="Border">
+          <div >
 
             <div className="IndividualText">
               <div>

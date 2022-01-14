@@ -79,7 +79,7 @@ export function ProfilePage({wallet}:any) {
         </div>
     </div>
     </div>
-    <div style={{ height: "calc(100vh - 121px)", borderTop:'0px'}} className="AllProfileCollectionFlexBox">
+    <div style={{ height: "calc(100vh - 200px)", borderTop:'0px'}} className="AllProfileCollectionFlexBox">
       {loadOptiPunks ? <MapMarkets wallet={wallet}/>: ""}
        {loadOctavas ? <MapOctavas wallet={wallet}/> : ""}
     </div>

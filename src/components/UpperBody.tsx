@@ -30,9 +30,9 @@ export function UpperBody() {
            <b> Funding  </b> </span>
         <span  style={{color: "#e07583"}} className ="UpperBodyText"> <b> <i>Public Goods </i> </b> </span>
     </div>
-    
+    <div style={{display:"flex"}} className="ImageLogo ImageCss">
     <img className="ImageLogo ImageCss" src={design} />
-   
+    </div >
 </div>
   )
 }
