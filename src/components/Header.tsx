@@ -26,7 +26,33 @@ export function Header({
   const [connected, setConnected] = useRecoilState<any>(connectedState)
   const [address, setAddress] = useRecoilState<any>(userAddress)
   const [reRun, setreRun] = useState(true)
+  var [profileClicked, setProfileClicked] = useState(true)
+  var [learnclicked, setLearnClicked] = useState(false)
 
+
+  function LearnButtonClick() {
+    setLearnClicked(true)
+    setProfileClicked(false)
+  }
+
+  function ProfileButtonClick() {
+    setLearnClicked(false)
+    setProfileClicked(true)
+  }
+
+  function MenuButtonClick() {
+    setLearnClicked(false)
+    setProfileClicked(false)
+  }
+
+  const clickStyle = {
+    color:'rgb(247, 247, 247)',
+    backgroundColor: 'rgb(18, 18, 26)',
+    borderRadius: '5px',
+    paddingTop: '8px',
+    paddingBottom: '8px'
+
+  }
   useEffect(() => {
   
     if (connected){
@@ -65,8 +91,8 @@ export function Header({
     <div className="Header">
       <div className="AppName">
         <Link to="/">
-          <div>
-            <img className="ImageLogo" src={logo} />
+          <div onClick={MenuButtonClick}>
+            <img className="ImageLogo RealLogo" src={logo} />
           </div>
         </Link>
       </div>
@@ -74,10 +100,10 @@ export function Header({
       <div className="MenuOptionsFlexBox">
         <div className="MenuOptionsFlexBoxInside">
           <Link to="/profile">
-            <div className="MenuOptions">Profile</div>
+            <div onClick={ProfileButtonClick} className="MenuOptions" style={profileClicked ? clickStyle :{}}>Profile</div>
           </Link>
           <Link to="/learn">
-            <div className="MenuOptions">Learn</div>
+            <div onClick={LearnButtonClick} className="MenuOptions" style={learnclicked ? clickStyle :{}}>Learn</div>
           </Link>
         </div>
 

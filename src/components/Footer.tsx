@@ -13,9 +13,9 @@ export function Footer() {
   
     <div className = "FooterProps">
         <div className="MenuOptions" style={{marginLeft: '40px'}}>  Circular Art</div>
-        <div className="MenuOptionsFlexBox">
+        <div className="FooterFlexBox">
        
-        <a href="https://twitter.com/OptiPunk" style={{height:'40px', width:"40px"}} >
+        <a href="https://twitter.com/OptiPunk" style={{height:'40px', width:"40px", marginRight:'5px'}} >
        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="256" cy="256" r="256"  style ={{fill:'white'}}className="rainbowFill"></circle><path  d="M256 0a256 256 0 110 512 256 256 0 010-512zm-45 392c113 0 175-94 175-175v-8c12-9 22-20 31-32-11 5-23 8-36 10 13-8 23-20 27-34-11 7-25 12-39 15a62 62 0 00-105 56c-51-3-96-27-126-65a62 62 0 0019 83c-10-1-20-3-28-8v1c0 30 21 54 49 60a61 61 0 01-27 1c7 25 30 42 57 43a124 124 0 01-91 25c27 18 59 28 94 28z" fill="black"></path>
               </svg>
               </a>

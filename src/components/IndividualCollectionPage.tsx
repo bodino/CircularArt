@@ -83,7 +83,7 @@ export function IndividualCollectionPage({wallet}:any) {
      <ToastContainer />
      
       <div style={{ justifyContent: 'center', borderBottom: '0px' }}className="FlexBoxMiddleImage">
-        <div style={{ height: '500px' }}className="FlexBoxColum">
+        <div style={{ height: '500px',borderRight:"0px"}}className="FlexBoxColum">
           {}
           {info.type == "live" ? <OctavasRender/>:<img className="ArtLarge" src={renderNow}></img> }
           
@@ -97,11 +97,13 @@ export function IndividualCollectionPage({wallet}:any) {
           
             <form onSubmit={handleSubmit}>
             <div style={{borderRight:"0px"}}className="FlexBoxColum">
-            {info.status == "Soon" ? "":<input style={{marginRight:"0px", width:"110px"}} onChange={handleAddressChange} className="ShowOptions" type="number"  max="20" min="1" placeholder="1"/>}
+            {info.status == "Active" ? <input style={{marginRight:"0px", width:"110px"}} onChange={handleAddressChange} className="ShowOptions" type="number"  max="20" min="1" placeholder="1"/>:""}
               {info.status == "Soon" ? <div style={{marginRight:"0px"}}className="ShowOptions"> Mint Soon</div> :""}
               
-              {info.status == "Soon" ? "": <br/>}
-              {info.status == "Soon" ? "": <input style={{marginRight:"0px"}}className="ShowOptions" type="submit" value="Mint"/> }
+              {info.status == "Active" ? <br/>: ""}
+              {info.status == "Active" ? <input style={{marginRight:"0px"}}className="ShowOptions" type="submit" value="Mint"/>: "" }
+              {info.status == "Finished" ? <div style={{marginRight:"0px"}}className="ShowOptions"> Mint Complete</div>: <br/>}
+
               </div>
             </form>
      
