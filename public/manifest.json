@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Circular Art",
+  "name": "A Generative Art Platform Designed to Fund Public Goods. Only On Optimism",
   "icons": [
     {
       "src": "favicon.ico",

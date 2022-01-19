@@ -32,7 +32,7 @@ export function Learn() {
       </div>
 
       <div
-        style={{ fontSize: '20px' }}
+        style={{  }}
         className="FlexBoxLearn"
         onClick={() => {
           setAllFalse()
@@ -44,7 +44,7 @@ export function Learn() {
         {/* {!loading ? <Sketch setup={setup} draw={draw} className="Art" />  : ""} */}
       </div>
       <div
-        style={{ display: firstOpen ? 'flex' : 'none' }}
+        style={{ display: firstOpen ? 'flex' : 'none', textAlign: 'center' }}
         className="FlexBoxLearn"
       >
         Circular Art is a generative art platform designed to sustainably fund
@@ -64,11 +64,10 @@ export function Learn() {
         {/* {!loading ? <Sketch setup={setup} draw={draw} className="Art" />  : ""} */}
       </div>
       <div
-        style={{ display: secondOpen ? 'flex' : 'none' }}
+        style={{ display: secondOpen ? 'flex' : 'none', textAlign: 'center' }}
         className="FlexBoxLearn"
       >
-        Select one of our curated collections, and view the auction price -
-        collections are sold through dutch auctions. When you submit a mint a
+        Select one of our curated collections, if it's active you can Mint for the designated price. When you submit a mint a
         new generative piece of art is created immediately and verifiable on
         chain.
       </div>
@@ -84,13 +83,12 @@ export function Learn() {
         {/* {!loading ? <Sketch setup={setup} draw={draw} className="Art" />  : ""} */}
       </div>
       <div
-        style={{ display: thirdOpen ? 'flex' : 'none' }}
+        style={{ display: thirdOpen ? 'flex' : 'none' , textAlign: 'center'}}
         className="FlexBoxLearn"
       >
         For the first collection, Circular Art, will take 50% to be used solely
-        for funding public goods. There will also be a 3% royalty on resales
-        half given to the artist and the remainder used to fund Circular Arts
-        operational expenses.
+        for funding public goods. The other 50% will be given to the artist for their work. 
+        A 3% royalty also applies on resales which will also be split evenly.
       </div>
       <div
         className="FlexBoxLearn"
@@ -104,7 +102,7 @@ export function Learn() {
         {/* {!loading ? <Sketch setup={setup} draw={draw} className="Art" />  : ""} */}
       </div>
       <div
-        style={{ display: forthOpen ? 'flex' : 'none' }}
+        style={{ display: forthOpen ? 'flex' : 'none' , textAlign: 'center'}}
         className="FlexBoxLearn"
       >
         Public goods are services which are open to the public to use and have
@@ -125,7 +123,7 @@ export function Learn() {
         {/* {!loading ? <Sketch style={{width:"400px", height:"400px"}} setup={setup} draw={draw} className="Art" />  : ""} */}
       </div>
       <div
-        style={{ display: fithOpen ? 'flex' : 'none' }}
+        style={{ display: fithOpen ? 'flex' : 'none', textAlign: 'center' }}
         className="FlexBoxLearn"
       >
         Reach out in our discord which can be found at the bottom of the page.

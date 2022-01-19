@@ -102,7 +102,7 @@ export function IndividualCollectionPage({wallet}:any) {
               
               {info.status == "Active" ? <br/>: ""}
               {info.status == "Active" ? <input style={{marginRight:"0px"}}className="ShowOptions" type="submit" value="Mint"/>: "" }
-              {info.status == "Finished" ? <div style={{marginRight:"0px"}}className="ShowOptions"> Mint Complete</div>: <br/>}
+              {info.status == "Finished" ? <div style={{marginRight:"0px"}}className="ShowOptions"> Mint Complete</div>: ""}
 
               </div>
             </form>
@@ -110,12 +110,12 @@ export function IndividualCollectionPage({wallet}:any) {
           <div >
 
             <div className="IndividualText">
-              <div>
+              {/* <div>
               <b>Artist:</b>
               </div>
               <div >
               {info.artist}
-            </div>
+            </div> */}
             </div>
            
             <div className="IndividualText">

@@ -14,13 +14,22 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const customStyles = {
   content: {
+    display: 'flex',
     top: '50%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    backgroundColor: 'rgb(255,218,185)',
+    // backgroundColor: 'rgb(255,218,185)',
     transform: 'translate(-50%, -50%)',
+    border: '1px solid rgb(45, 45, 61)',
+    margin: '5px',
+  
+    // justifyContent: spaceBetween,
+    backgroundColor: 'peachpuff',
+    borderRadius: '3px',
+    height: '430px',
+    flexDirection: 'column' as 'column',
   },
 };
 
@@ -53,7 +62,7 @@ function TransferModal({item, wallet}:any) {
         const contract = new ethers.Contract('0xB8Df6Cc3050cC02F967Db1eE48330bA23276A492', NftContract.abi, provider.getSigner() );
         console.log(wallet.getState().wallet);
         var tx =  await contract.safeTransferFrom(wallet.getState().address, inputedAddress, item);
-        notify();
+        toast("NFT Sent To " +{inputedAddress})
 
     } else {
         toast("Not a valid Address")
@@ -83,16 +92,20 @@ function TransferModal({item, wallet}:any) {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
+       
       >
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Transfer NFT</h2>
         <img className="UserMarketImg" src={"https://cloudflare-ipfs.com/ipfs/QmbAhtqQqiSQqwCwQgrRB6urGc3umTskiuVpgX7FvHhutU/" +item.toString()+ ".png"}/>
        
-        <div>Enter Transfer Address</div>
+        {/* <div>Enter Transfer Address</div> */}
+
         <form onSubmit={handleSubmit}>
-            <input type="text"  onChange={handleAddressChange} required/>
-            <input type="submit"></input>
+          <div style={{borderRight: '0px'}}className="FlexBoxColum">
+            <input style={{marginRight: '0px', marginTop: '20px'}} className="ShowOptions" type="text" placeholder="Enter Address" onChange={handleAddressChange} required/>
+            <input style={{marginRight: '0px', marginTop: '10px'}}className="ShowOptions" type="submit" value="Transfer"></input>
+            </div>
         </form>
-        <button onClick={closeModal}>cancel</button>
+        {/* <button onClick={closeModal}>cancel</button> */}
       </Modal>
       <ToastContainer />
     </div>

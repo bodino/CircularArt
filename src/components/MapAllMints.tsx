@@ -65,10 +65,11 @@ export function MapAllMints({isLoading, wallet, info}:any) {
         ))}
        
         </div>
-         <div style={{justifyContent:"space-around",textAlign:"center"}} className="FlexBox">
+         <div style={{justifyContent:"space-around",textAlign:"center", marginTop:'0px', borderBottom:'0px', paddingBottom:'20px'}} className="FlexBox">
              <div style={{width:'100px'}}className="buttonColor" onClick={minustwenty}>
                 Previous 
              </div>
+             <br/>
              <div style={{width:'100px'}}className="buttonColor" onClick={addtwenty}>
                 Next 
              </div>

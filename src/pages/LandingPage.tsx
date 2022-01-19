@@ -54,7 +54,7 @@ export function LandingPage() {
             <Collection
               NameOfCollection="Octavas"
               CollectionImage={octavian}
-              CollectionCreationDate="12/30/2021"
+              CollectionCreationDate="01/21/2022"
               MaxMint="981"
               TotalMinted="0"
               AmountGeneratedForPublicGoods=""

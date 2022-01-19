@@ -26,7 +26,7 @@ export function Header({
   const [connected, setConnected] = useRecoilState<any>(connectedState)
   const [address, setAddress] = useRecoilState<any>(userAddress)
   const [reRun, setreRun] = useState(true)
-  var [profileClicked, setProfileClicked] = useState(true)
+  var [profileClicked, setProfileClicked] = useState(false)
   var [learnclicked, setLearnClicked] = useState(false)
 
 
