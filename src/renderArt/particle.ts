@@ -2,29 +2,24 @@ import { throws } from "assert";
 import React from "react";
 import Sketch from "react-p5";
 
-export function Particle(p5:any):any{
+export function Particle(p5:any, heighty:any, widthy:any, nostroke:any){
     
 
     // @ts-ignore
     this.pos = p5.createVector(p5.random(p5.width),p5.random(p5.height));
     // @ts-ignore
-    this.vel = p5.constructor.Vector.random2D();
+    this.vel = p5.createVector(0,0);
     // @ts-ignore
     this.acc = p5.createVector(0,0);
     // @ts-ignore
-    this.width = p5.random(20)
+    this.width = widthy
     // @ts-ignore
-    this.height =p5.random(20)
+    this.height =heighty
     // @ts-ignore
-
     this.maxspeed=4;
     // @ts-ignore
     this.previousPos = this.pos.copy();
     
-    // @ts-ignore
-    
-    // @ts-ignore
-
     // @ts-ignore
     this.update = function() {
         this.vel.add(this.acc);
@@ -53,7 +48,9 @@ export function Particle(p5:any):any{
          // @ts-ignore
     this.show = function(color1,color2,color3) {
         // @ts-ignore
-        
+        if (nostroke){
+            p5.noStroke()
+        }
         // @ts-ignore
         p5.fill(p5.color((color1),(color2),color3))
         // p5.point(this.pos.x, this.pos.y);

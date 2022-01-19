@@ -3404,35 +3404,35 @@
     "@typescript-eslint/types" "4.15.2"
     "eslint-visitor-keys" "^2.0.0"
 
-"@walletconnect/browser-utils@^1.7.0":
-  "integrity" "sha512-bQsbCIDTT1OB4v8VF5bzg3byp03qTst9kLmjQj68ElecIUcdS6nZvEDhZdQK/r63WMVnA2KrTb5AEN6hPRGgIw=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/browser-utils/-/browser-utils-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/browser-utils@^1.7.1":
+  "integrity" "sha512-y6KvxPhi52sWzS0/HtA3EhdgmtG8mXcxdc26YURDOVC/BJh3MxV8E16JFrT4InylOqYJs6dcSLWVfcnJaiPtZw=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/browser-utils/-/browser-utils-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
     "@walletconnect/safe-json" "1.0.0"
-    "@walletconnect/types" "^1.7.0"
+    "@walletconnect/types" "^1.7.1"
     "@walletconnect/window-getters" "1.0.0"
     "@walletconnect/window-metadata" "1.0.0"
     "detect-browser" "5.2.0"
 
-"@walletconnect/client@^1.7.0":
-  "integrity" "sha512-56aXK9Rb30cHhl4DMaUakz/3KG3Mr+/9h2iCvKDqAxmIeD931ahMZlBu86T7hGf4vboisZZEhj8/ZwiAM4Ukvg=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/client/-/client-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/client@^1.7.1":
+  "integrity" "sha512-xD8B8s1hL7Z5vJwb3L0u1bCVAk6cRQfIY9ycymf7KkmIhkAONQJNf2Y0C0xIpbPp2fdn9VwnSfLm5Ed/Ht/1IA=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/client/-/client-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
-    "@walletconnect/core" "^1.7.0"
-    "@walletconnect/iso-crypto" "^1.7.0"
-    "@walletconnect/types" "^1.7.0"
-    "@walletconnect/utils" "^1.7.0"
+    "@walletconnect/core" "^1.7.1"
+    "@walletconnect/iso-crypto" "^1.7.1"
+    "@walletconnect/types" "^1.7.1"
+    "@walletconnect/utils" "^1.7.1"
 
-"@walletconnect/core@^1.7.0":
-  "integrity" "sha512-0YX9Y/CVYctKPcSgSyp2wLrk4OgSenmyzWj6Z3C93Hb7PG+tJ+dKCeNFeEIYA03QQRxHew5uMLPbVgmdtmB/0w=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/core/-/core-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/core@^1.7.1":
+  "integrity" "sha512-qO+4wykyRNiq3HEuaAA2pW2PDnMM4y7pyPAgiCwfHiqF4PpWvtcdB301hI0K5am9ghuqKZMy1HlE9LWNOEBvcw=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/core/-/core-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
-    "@walletconnect/socket-transport" "^1.7.0"
-    "@walletconnect/types" "^1.7.0"
-    "@walletconnect/utils" "^1.7.0"
+    "@walletconnect/socket-transport" "^1.7.1"
+    "@walletconnect/types" "^1.7.1"
+    "@walletconnect/utils" "^1.7.1"
 
 "@walletconnect/crypto@^1.0.1":
   "integrity" "sha512-IgUReNrycIFxkGgq8YT9HsosCkhutakWD9Q411PR0aJfxpEa/VKJeaLRtoz6DvJpztWStwhIHnAbBoOVR72a6g=="
@@ -3458,24 +3458,24 @@
   "resolved" "https://registry.npmjs.org/@walletconnect/environment/-/environment-1.0.0.tgz"
   "version" "1.0.0"
 
-"@walletconnect/http-connection@^1.7.0":
-  "integrity" "sha512-U76SSiXfgsfhZodxZCvOxgeQ4UMv4mVN+NEbPHiM5KpNsaxG/aKanUjxznNhrIffQNiVRc9TphsmDeQHggdZcA=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/http-connection/-/http-connection-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/http-connection@^1.7.1":
+  "integrity" "sha512-cz3pw2MsTyBT5hy8qhs67NFHTIFOzltdMx9Hy1ftkjXQYtenxIBzAQpZzF6l/lXC3GmMziueYnknZILo1+wgfg=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/http-connection/-/http-connection-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
-    "@walletconnect/types" "^1.7.0"
-    "@walletconnect/utils" "^1.7.0"
+    "@walletconnect/types" "^1.7.1"
+    "@walletconnect/utils" "^1.7.1"
     "eventemitter3" "4.0.7"
     "xhr2-cookies" "1.1.0"
 
-"@walletconnect/iso-crypto@^1.7.0":
-  "integrity" "sha512-ZUQ/MAM9TXtneIaRjxW/PuFF+es4I9OrCGFgVTCYAaa7p2zdy7BgHmVOnxxOpUh9VYwLXoiA/FU234NwS0ulYw=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/iso-crypto/-/iso-crypto-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/iso-crypto@^1.7.1":
+  "integrity" "sha512-qMiW0kLN6KCjnLMD50ijIj1lQqjNjGszGUwrSVUiS2/Dp4Ecx+4QEtHbmVwGEkfx4kelYPFpDJV3ZJpQ4Kqg/g=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/iso-crypto/-/iso-crypto-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
     "@walletconnect/crypto" "^1.0.1"
-    "@walletconnect/types" "^1.7.0"
-    "@walletconnect/utils" "^1.7.0"
+    "@walletconnect/types" "^1.7.1"
+    "@walletconnect/utils" "^1.7.1"
 
 "@walletconnect/jsonrpc-types@^1.0.0":
   "integrity" "sha512-11QXNq5H1PKZk7bP8SxgmCw3HRaDuPOVE+wObqEvmhc7OWYUZqfuaaMb+OXGRSOHL3sbC+XHfdeCxFTMXSFyng=="
@@ -3497,14 +3497,14 @@
   "resolved" "https://registry.npmjs.org/@walletconnect/mobile-registry/-/mobile-registry-1.4.0.tgz"
   "version" "1.4.0"
 
-"@walletconnect/qrcode-modal@^1.7.0":
-  "integrity" "sha512-v2VL6+ugDYlW74ABiAVXG7YViELo3SNFHAHMbIO3ZvWhAB34KNyhkxGjoinOBuPdFUOyA4wTpbY9Q7jJRZDabA=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/qrcode-modal/-/qrcode-modal-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/qrcode-modal@^1.7.1":
+  "integrity" "sha512-m/4lSx3pgj8V2eHVJcGnxBKUSCNFtyVIcg5tqbSJHi9HjKIBxvRq4D5M4X4yEpgXYtRmTucihxNCrj2zQrmlSQ=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/qrcode-modal/-/qrcode-modal-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
-    "@walletconnect/browser-utils" "^1.7.0"
+    "@walletconnect/browser-utils" "^1.7.1"
     "@walletconnect/mobile-registry" "^1.4.0"
-    "@walletconnect/types" "^1.7.0"
+    "@walletconnect/types" "^1.7.1"
     "copy-to-clipboard" "^3.3.1"
     "preact" "10.4.1"
     "qrcode" "1.4.4"
@@ -3523,43 +3523,43 @@
   "resolved" "https://registry.npmjs.org/@walletconnect/safe-json/-/safe-json-1.0.0.tgz"
   "version" "1.0.0"
 
-"@walletconnect/socket-transport@^1.7.0":
-  "integrity" "sha512-HSWGZxdxDtf8K1Kd1eD1QuObpoNxHui+A/+inuC8i8fcifDjZu85AeJIfCKQijlmgjLR/25Ry3eJFbYpRXxUjQ=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/socket-transport/-/socket-transport-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/socket-transport@^1.7.1":
+  "integrity" "sha512-Gu1RPro0eLe+HHtLhq/1T5TNFfO/HW2z3BnWuUYuJ/F8w1U9iK7+4LMHe+LTgwgWy9Ybcb2k0tiO5e3LgjHBHQ=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/socket-transport/-/socket-transport-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
-    "@walletconnect/types" "^1.7.0"
-    "@walletconnect/utils" "^1.7.0"
+    "@walletconnect/types" "^1.7.1"
+    "@walletconnect/utils" "^1.7.1"
     "ws" "7.5.3"
 
-"@walletconnect/types@^1.7.0":
-  "integrity" "sha512-eoqnF+U04IuMfGIBsqYhAR6SIM2kzcrZM/RCVcomT/lIcsRoBwNxR+86+3Vn12/iaGnuAKn8xDZhZ47SLFmanQ=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/types/-/types-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/types@^1.7.1":
+  "integrity" "sha512-X0NunEUgq46ExDcKo7BnnFpFhuZ89bZ04/1FtohNziBWcP2Mblp2yf+FN7iwmZiuZ3bRTb8J1O4oJH2JGP9I7A=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/types/-/types-1.7.1.tgz"
+  "version" "1.7.1"
 
-"@walletconnect/utils@^1.7.0":
-  "integrity" "sha512-DnYyKNMkpPUkbu6YwHfycvzlpx7Ro/qDPIDAuaNYT4FFWFyYxfx2ZY66kU3XklQivAc8dK7TyvYPJ08LWd8w4Q=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/utils/-/utils-1.7.0.tgz"
-  "version" "1.7.0"
+"@walletconnect/utils@^1.7.1":
+  "integrity" "sha512-7Lig9rruqTMaFuwEhBrArq1QgzIf2NuzO6J3sCUYCZh60EQ7uIZjekaDonQjiQJAbfYcgWUBm8qa0PG1TzYN3Q=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/utils/-/utils-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
-    "@walletconnect/browser-utils" "^1.7.0"
+    "@walletconnect/browser-utils" "^1.7.1"
     "@walletconnect/encoding" "^1.0.0"
     "@walletconnect/jsonrpc-utils" "^1.0.0"
-    "@walletconnect/types" "^1.7.0"
+    "@walletconnect/types" "^1.7.1"
     "bn.js" "4.11.8"
     "js-sha3" "0.8.0"
     "query-string" "6.13.5"
 
 "@walletconnect/web3-provider@^1.6.2":
-  "integrity" "sha512-tX0nKVJAs1jrRmFAP8nv1h27ZttWQ/4pOW8hkH32JIB76zbsncdUOjHpnzpzgXrzMyrCzfeXeZ8dbdW4jS1KDw=="
-  "resolved" "https://registry.npmjs.org/@walletconnect/web3-provider/-/web3-provider-1.7.0.tgz"
-  "version" "1.7.0"
+  "integrity" "sha512-dhoYwQaBVbaKIiELNeCF4kW7Dslbf73wDIsxOF9gmjVch1Qi18kNlqbR03u56iBcAsXU0tAwfd9Z7cGHfUX1Fg=="
+  "resolved" "https://registry.npmjs.org/@walletconnect/web3-provider/-/web3-provider-1.7.1.tgz"
+  "version" "1.7.1"
   dependencies:
-    "@walletconnect/client" "^1.7.0"
-    "@walletconnect/http-connection" "^1.7.0"
-    "@walletconnect/qrcode-modal" "^1.7.0"
-    "@walletconnect/types" "^1.7.0"
-    "@walletconnect/utils" "^1.7.0"
+    "@walletconnect/client" "^1.7.1"
+    "@walletconnect/http-connection" "^1.7.1"
+    "@walletconnect/qrcode-modal" "^1.7.1"
+    "@walletconnect/types" "^1.7.1"
+    "@walletconnect/utils" "^1.7.1"
     "web3-provider-engine" "16.0.1"
 
 "@walletconnect/window-getters@^1.0.0", "@walletconnect/window-getters@1.0.0":
@@ -4265,15 +4265,15 @@
     "web3-utils" "1.2.1"
 
 "autoprefixer@^9.6.1":
-  "integrity" "sha512-XrvP4VVHdRBCdX1S3WXVD8+RyG9qeb1D5Sn1DeLiG2xfSpzellk5k54xbUERJ3M5DggQxes39UGOTP8CFrEGbg=="
-  "resolved" "https://registry.npmjs.org/autoprefixer/-/autoprefixer-9.8.6.tgz"
-  "version" "9.8.6"
+  "integrity" "sha512-eM9d/swFopRt5gdJ7jrpCwgvEMIayITpojhkkSMRsFHYuH5bkSQ4p/9qTEHtmNudUZh22Tehu7I6CxAW0IXTKA=="
+  "resolved" "https://registry.npmjs.org/autoprefixer/-/autoprefixer-9.8.8.tgz"
+  "version" "9.8.8"
   dependencies:
     "browserslist" "^4.12.0"
     "caniuse-lite" "^1.0.30001109"
-    "colorette" "^1.2.1"
     "normalize-range" "^0.1.2"
     "num2fraction" "^1.2.2"
+    "picocolors" "^0.2.1"
     "postcss" "^7.0.32"
     "postcss-value-parser" "^4.1.0"
 
@@ -5738,11 +5738,6 @@
   dependencies:
     "color-convert" "^1.9.1"
     "color-string" "^1.5.4"
-
-"colorette@^1.2.1":
-  "integrity" "sha512-puCDz0CzydiSYOrnXpz/PKd69zRrribezjtE9yd4zvytoRc8+RY/KJPvtPFKZS3E3wP6neGyMe0vOTlHO5L3Pw=="
-  "resolved" "https://registry.npmjs.org/colorette/-/colorette-1.2.1.tgz"
-  "version" "1.2.1"
 
 "combined-stream@^1.0.6", "combined-stream@^1.0.8", "combined-stream@~1.0.6":
   "integrity" "sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg=="
@@ -8599,9 +8594,9 @@
     "readable-stream" "^2.3.6"
 
 "follow-redirects@^1.0.0", "follow-redirects@^1.10.0", "follow-redirects@^1.14.0", "follow-redirects@^1.14.4":
-  "integrity" "sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA=="
-  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.5.tgz"
-  "version" "1.14.5"
+  "integrity" "sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ=="
+  "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.7.tgz"
+  "version" "1.14.7"
 
 "follow-redirects@1.5.10":
   "integrity" "sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ=="
@@ -13087,11 +13082,10 @@
     "postcss-values-parser" "^2.0.0"
 
 "postcss-initial@^3.0.0":
-  "integrity" "sha512-ugA2wKonC0xeNHgirR4D3VWHs2JcU08WAi1KFLVcnb7IN89phID6Qtg2RIctWbnvp1TM2BOmDtX8GGLCKdR8YA=="
-  "resolved" "https://registry.npmjs.org/postcss-initial/-/postcss-initial-3.0.2.tgz"
-  "version" "3.0.2"
+  "integrity" "sha512-3RLn6DIpMsK1l5UUy9jxQvoDeUN4gP939tDcKUHD/kM8SGSKbFAnvkpFpj3Bhtz3HGk1jWY5ZNWX6mPta5M9fg=="
+  "resolved" "https://registry.npmjs.org/postcss-initial/-/postcss-initial-3.0.4.tgz"
+  "version" "3.0.4"
   dependencies:
-    "lodash.template" "^4.5.0"
     "postcss" "^7.0.2"
 
 "postcss-lab-function@^2.0.1":
@@ -15073,9 +15067,9 @@
   "version" "2.0.0"
 
 "selfsigned@^1.10.8":
-  "integrity" "sha512-2P4PtieJeEwVgTU9QEcwIRDQ/mXJLX8/+I3ur+Pg16nS8oNbrGxEso9NyYWy8NAmXiNl4dlAp5MwoNeCWzON4w=="
-  "resolved" "https://registry.npmjs.org/selfsigned/-/selfsigned-1.10.8.tgz"
-  "version" "1.10.8"
+  "integrity" "sha512-lkjaiAye+wBZDCBsu5BGi0XiLRxeUlsGod5ZP924CRSEoGuZAw/f7y9RKu28rwTfiHVhdavhB0qH0INV6P1lEA=="
+  "resolved" "https://registry.npmjs.org/selfsigned/-/selfsigned-1.10.14.tgz"
+  "version" "1.10.14"
   dependencies:
     "node-forge" "^0.10.0"
 

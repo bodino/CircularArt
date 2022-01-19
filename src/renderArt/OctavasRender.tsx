@@ -7,7 +7,7 @@ import banner from '../art/anotherBanner.png'
 import { url } from 'inspector'
 
 export function OctavasRender() {
-
+  
     let renderAnimation = ( ) => {
         setloading(false);
       }
@@ -42,55 +42,84 @@ export function OctavasRender() {
           High: 8000,
         };
 
-        var AmountTypesArray:any = [AmountTypes.Low, AmountTypes.Medium, AmountTypes.Medium, AmountTypes.Medium, AmountTypes.High ];
-        const BackgroundColor = {
-          Black: 0,
-          Gray: 100,
-          White: 200,
-          Red:1,
-          Blue:2
-        };
+        var AmountTypesArray = [AmountTypes.Low, AmountTypes.Medium, AmountTypes.Medium, AmountTypes.Medium, AmountTypes.High ];
+  const BackgroundColor = {
+    Black: 0,
+    Gray: 5,
+    White: 6,
+    Red:1,
+    Blue:2,
+    Orange:3,
+    Green:4,
+  };
 
-        var BackgroundTypesArray:any = [BackgroundColor.Black, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.White, BackgroundColor.Red, BackgroundColor.Blue]
+  var BackgroundTypesArray = [BackgroundColor.Green, BackgroundColor.Green, BackgroundColor.Orange, BackgroundColor.Orange,  BackgroundColor.Black,BackgroundColor.Black,BackgroundColor.Black, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.Gray, BackgroundColor.White, BackgroundColor.White, BackgroundColor.Red, BackgroundColor.Blue]
 
         var colorbackground:any;
       var [loading, setloading] = useState(false);
 
     let setup = (p5:any, canvasParentRef:any) => {
-
-    //   p5.randomSeed(0xa3441a1);
-    //   p5.noiseSeed(124);
+      p5.randomSeed(5110099571014948499997);
+      p5.noiseSeed(5110099571014948499997);
+    
       colorbackground = p5.random(BackgroundTypesArray)
 
       p5.createCanvas(1000, 1000).parent(canvasParentRef);
       if (colorbackground == 1){
-          p5.background(255,4,33)
-      } else if (colorbackground == 2){
+        p5.background(255,4,33)
+    } else if (colorbackground == 2){
         p5.background(13,53,174)
-      }
-      else {
-          p5.background(colorbackground);
-      }
+    } else if (colorbackground ==3){
+        p5.background(212,98,56)
+    } else if (colorbackground ==4){
+        p5.background(26,128,78)
+    }
+    else if (colorbackground ==0) {
+        p5.background(0);
+    } else if (colorbackground ==5) {
+        p5.background(100);
+    } else if (colorbackground ==6) {
+        p5.background(200);
+    }
 
       cols = p5.floor(p5.width/scl);
       rows = p5.floor(p5.height/scl);
       p5.frameRate(30);
 
       flowfield = new Array(cols*rows);
-      maxFrames = (p5.noise(1)*200);
-      color3 = p5.random(256);
-      color2 = p5.random(256);
-      color1 = p5.random(256);
+      maxFrames = Math.round((p5.noise(1)*200));
+      color3 = Math.round(p5.random(256));
+      color2 = Math.round(p5.random(256));
+      color1 = Math.round(p5.random(256));
       offset = p5.random(3.14*2);
 
       type=p5.random(6)
+      var stroke = p5.random(100)
+      var nostroke;
+      if (stroke >= 98){
+        nostroke = true;
+      }
       var amount = p5.random(AmountTypesArray);
+
+      var sizedeterminer = p5.random(100);
+      var max;
+
+      if (sizedeterminer <= 90){
+        max = 20;
+    
+    } else if (sizedeterminer <= 95){
+        max = 10;
+    } else if (sizedeterminer <= 100){
+        max = 30;
+    }
 
       console.log(amount);
       // @ts-ignore
       for (var i = 0; i < amount; i++){
-           // @ts-ignore
-          particles[i] = new Particle(p5);
+          var heighty = p5.random(max);
+          var widthy = p5.random(max);
+          // @ts-ignore
+          particles[i] = new Particle(p5, heighty, widthy, nostroke);
           colors1[i]= color1;
           colors2[i]= color2;
           colors3[i]= color3;
@@ -184,7 +213,7 @@ export function OctavasRender() {
 
       }
       for (var i = 0; i < particles.length; i++){
-      var colorchange = p5.random(200)-100;
+      var colorchange = p5.random(100)-50;
       colors1[i] +=colorchange;
       colors2[i] += colorchange;
       colors3[i] +=colorchange;
