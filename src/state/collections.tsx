@@ -13,7 +13,7 @@ export const OptiPunks = {
     'Optipunks are punks on #Optimism. Mint cost 0.005 eth. All profit will go to public goods on #Optimism. Unofficial punks project unaffiliated with OptimismPBC',
   address: '0xB8Df6Cc3050cC02F967Db1eE48330bA23276A492',
   ipfslink:
-    'https://cloudflare-ipfs.com/ipfs/QmbAhtqQqiSQqwCwQgrRB6urGc3umTskiuVpgX7FvHhutU/',
+    'https://ipfs.io/ipfs/QmbAhtqQqiSQqwCwQgrRB6urGc3umTskiuVpgX7FvHhutU/',
 }
 export const Unannounced = {
   name: 'Unannounced',
