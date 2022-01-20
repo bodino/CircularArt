@@ -38,6 +38,6 @@ export const Octavas = {
   type: 'live',
   coverimg: '',
   description: '',
-  address: '',
+  address: '0xF53A7724dA83e2270316cB1A81d8501279aA41ce',
   ipfslink: '',
 }

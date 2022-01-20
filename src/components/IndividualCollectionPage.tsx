@@ -15,7 +15,7 @@ import { ethers } from 'ethers'
 import { ToastContainer, toast } from 'react-toastify';
 
 import OctavasRender from '../renderArt/OctavasRender'
-import NftContract from '../contracts/nft.json'
+import NftContract from '../contracts/Octavas.json'
 
 
 export function IndividualCollectionPage({wallet}:any) {
@@ -24,19 +24,25 @@ export function IndividualCollectionPage({wallet}:any) {
   var [info, setInfo] = useState<any>(OptiPunks);
 
   var img;
-
-
+  
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [mintAmount, setMintAmount] = useState(1)
 
-  async function transferNFt() {
+  async function mintNFT() {
       
     if (mintAmount >= 1 && mintAmount <= 20){
-        
+      var number = 0.05 *mintAmount;
+      var stringOfNumber = number.toString();
+      let overrides = {
+        value: ethers.utils.parseEther(stringOfNumber) ,    // ether in this case MUST be a string
+        gasLimit: 3851430
+    };
+
         var provider = new ethers.providers.Web3Provider(wallet.getState().wallet.provider)
-        const contract = new ethers.Contract(info.address, NftContract.abi, provider.getSigner() );
-        console.log(wallet.getState().wallet);
-        var tx =  await contract.mintOptiPunk(mintAmount);
+        const contract = new ethers.Contract(info.address, NftContract.abi, provider.getSigner() ); //change address on deploy
+        // console.log(wallet.getState().wallet);
+        var tx =  await contract.mintOctavas(mintAmount,overrides);
+        toast("Mint TX Has Been Sent")
 
     } else {
         toast("Max Mint Is 20")
@@ -52,7 +58,7 @@ export function IndividualCollectionPage({wallet}:any) {
   const handleSubmit = (event:any) => {
     event.preventDefault();
     console.log("hi");
-    transferNFt()
+    mintNFT()
   };
 
   useEffect(() => {

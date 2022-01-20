@@ -2,16 +2,17 @@ import React from 'react'
 import logo from './logo.svg'
 import { useState, useEffect } from 'react'
 import TransferModal from './TransferModal'
- 
+import { OptiPunks } from '../state/collections'
+
 
 
 export function RenderNFT({item, wallet}:any) {
- 
+  var [info, setInfo] = useState<any>(OptiPunks);
 
   return (
 
     <div style={{height:"350px"}}className="FlexIndividualCollection">
-        <img className="UserMarketImg" src={"https://cloudflare-ipfs.com/ipfs/QmbAhtqQqiSQqwCwQgrRB6urGc3umTskiuVpgX7FvHhutU/" +item.toString()+ ".png"}></img>
+        <img className="UserMarketImg" src={info.ipfslink+item.toString()+ ".png"}></img>
         <div >
         <b>OptiPunk {item} </b>
         </div>
