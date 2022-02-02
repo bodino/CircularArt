@@ -13,6 +13,11 @@ export const marketState = atom<any>({
     default: []
 })
 
+export const octavasState = atom<any>({
+    key: "OctavasState",
+    default: []
+})
+
 export const isItLoading = atom<any>({
     key: "isLoading",
     default: true

@@ -13,6 +13,8 @@ import { Unannounced } from '../state/collections'
 import { Octavas } from '../state/collections'
 import { ethers } from 'ethers'
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import OctavasRender from '../renderArt/OctavasRender'
 import NftContract from '../contracts/Octavas.json'
@@ -29,10 +31,15 @@ export function IndividualCollectionPage({wallet}:any) {
   const [mintAmount, setMintAmount] = useState(1)
 
   async function mintNFT() {
-      
+      console.log(wallet.getState());
+    if (wallet.getState().network == 10){
     if (mintAmount >= 1 && mintAmount <= 20){
-      var number = 0.05 *mintAmount;
+      var number = Math.round(5*mintAmount);
+      number = number /100
+      
+     console.log(number)
       var stringOfNumber = number.toString();
+      console.log(stringOfNumber)
       let overrides = {
         value: ethers.utils.parseEther(stringOfNumber) ,    // ether in this case MUST be a string
         gasLimit: 3851430
@@ -47,6 +54,7 @@ export function IndividualCollectionPage({wallet}:any) {
     } else {
         toast("Max Mint Is 20")
     }
+  } else {toast("Connected To Wrong Network")}
 
   }
 
@@ -77,6 +85,7 @@ export function IndividualCollectionPage({wallet}:any) {
    
   }, );
   return (
+    
     <div
       style={{
         flexDirection: 'column',
@@ -86,12 +95,12 @@ export function IndividualCollectionPage({wallet}:any) {
       }}
       className="Menu2"
     >
-     <ToastContainer />
+   
      
       <div style={{ justifyContent: 'center', borderBottom: '0px' }}className="FlexBoxMiddleImage">
         <div style={{ height: '500px',borderRight:"0px"}}className="FlexBoxColum">
           {}
-          {info.type == "live" ? <OctavasRender/>:<img className="ArtLarge" src={renderNow}></img> }
+          {info.type == "live" ? <OctavasRender pushedseed={(Math.random()*1000000000).toString()}/>:<img className="ArtLarge" src={renderNow}></img> }
           
         </div>
 
@@ -146,8 +155,9 @@ export function IndividualCollectionPage({wallet}:any) {
       
         {!info.ipfslink ? "": <> <MapAllMints info={info}/> </> }
    
-  
+        <ToastContainer />
     </div>
+    
   )
 }
 

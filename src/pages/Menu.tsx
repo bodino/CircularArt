@@ -14,7 +14,7 @@ import Web3 from 'web3'
 import { ethers } from 'ethers'
 import Header from '../components/Header'
 import UpperBody from '../components/UpperBody'
-import { connectedState, marketState } from '../state'
+import { connectedState, marketState, octavasState } from '../state'
 import MiddleBody from '../components/MiddleBody'
 import Collection from '../components/Collection'
 
@@ -26,6 +26,7 @@ import LearnPage from './LearnPage'
 import IndividualCollectionPage from '../components/IndividualCollectionPage'
 import ProfilePage from '../components/ProfilePage'
 import NftContract from '../contracts/nft.json'
+import OctavasContract from '../contracts/Octavas.json'
 
 var Eth = require('web3-eth')
 let web3
@@ -37,6 +38,7 @@ var useraddress:any;
 export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
   const [connected, setConnected] = useRecoilState<any>(connectedState)
   const [marketArray, setMarketArray] = useRecoilState<any>(marketState)
+  const [occtavasArray, setOctavasArray] = useRecoilState<any>(octavasState)
 
   async function logintoWallet() {
     await wallet.walletSelect()
@@ -56,15 +58,12 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
     var complete = false; 
     try {
      while (complete == false) {
-      console.log("hi");
       console.log()
 
         provider = new ethers.providers.Web3Provider(wallet.getState().wallet.provider)
         console.log(provider);
         const contract = new ethers.Contract('0xB8Df6Cc3050cC02F967Db1eE48330bA23276A492', NftContract.abi, provider );
-        console.log("bye");
         tokenId =  await contract.tokenOfOwnerByIndex(setaddress, tokenIndex);
-        console.log("sigh");
         tokenId = tokenId.toNumber();
         console.log("tokenId", tokenId);
         collectibleUpdate[tokenIndex] = [tokenId];
@@ -80,6 +79,42 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
     
   }
 
+  async function findUsersOctavas(setaddress:any) {
+    let collectibleUpdate = [];
+    let tokenIndex = 0;
+    var tokenId;
+    var seed;
+    var complete = false; 
+    try {
+     while (complete == false) {
+     
+      var OctavasDetails = {
+        ID: "",
+        SEED: ""
+      }
+        provider = new ethers.providers.Web3Provider(wallet.getState().wallet.provider)
+        console.log(provider);
+        const contract = new ethers.Contract('0xc58c9a631ce193fC3F2Bb190Ab5Ba1BE181c09D1', OctavasContract.abi, provider ); //change contract address
+        tokenId =  await contract.tokenOfOwnerByIndex(setaddress, tokenIndex);
+        tokenId = tokenId.toNumber();
+        seed = await contract.seeds(tokenId)
+        
+        OctavasDetails.SEED = seed;
+        OctavasDetails.ID = tokenId; 
+        
+        collectibleUpdate[tokenIndex] = [OctavasDetails];
+  
+        tokenIndex++;
+  
+     }
+    } catch (e) {
+      complete = true;
+    }
+    
+    setOctavasArray(collectibleUpdate);
+    
+  }
+
   return (
     <Router>
       <div className="Menu1">
@@ -89,6 +124,7 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
           walletConnected={walletConnected}
           setWalletConnected={setWalletConnected}
           findUsersnfts={findUsersnfts}
+          findUsersOctavas={findUsersOctavas}
         />
         <Routes>
           <Route path="/"  element={<LandingPage/>}/>

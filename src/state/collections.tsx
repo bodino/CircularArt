@@ -33,11 +33,11 @@ export const Octavas = {
   artist: 'Bodo',
   date: '1/12/2022',
   total: '981',
-  minted: '0',
-  status: 'Soon',
+  minted: '981',
+  status: 'Finished',
   type: 'live',
   coverimg: '',
   description: '',
-  address: '0xF53A7724dA83e2270316cB1A81d8501279aA41ce',
+  address: '0xc58c9a631ce193fC3F2Bb190Ab5Ba1BE181c09D1', //change this address to actual address
   ipfslink: '',
 }

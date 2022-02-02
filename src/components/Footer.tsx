@@ -21,7 +21,7 @@ export function Footer() {
               </svg>
               </a>
               
-              <a href="https://discord.gg/Xeeun2dp" style={{height:'40px', width:"40px", marginRight:'5px', cursor: 'pointer'}}>
+              <a href="https://discord.gg/x9WDWApECc" style={{height:'40px', width:"40px", marginRight:'5px', cursor: 'pointer'}}>
               <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="256" cy="256" r="256" className="rainbowFill"></circle><path d="M372 169s-33-26-72-29l-4 7c36 8 52 21 69 36-29-15-58-29-109-29s-80 14-109 29c17-15 37-29 69-36l-3-7c-42 3-73 29-73 29s-37 54-44 160c38 43 95 43 95 43l12-16c-21-7-43-19-63-42 23 18 59 37 116 37s93-19 117-37c-20 23-43 35-63 42l12 16s57 0 94-43c-6-106-44-160-44-160zM209 300c-14 0-26-13-26-29s12-30 26-30 25 13 25 30-11 29-25 29zm94 0c-14 0-25-13-25-29s11-30 25-30 26 13 26 30-12 29-26 29z" fill="#FFF"></path></svg>
               </a>
 

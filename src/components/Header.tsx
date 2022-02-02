@@ -21,7 +21,8 @@ export function Header({
   wallet,
   walletConnected,
   setWalletConnected,
-  findUsersnfts
+  findUsersnfts,
+  findUsersOctavas
 }: any) {
   const [connected, setConnected] = useRecoilState<any>(connectedState)
   const [address, setAddress] = useRecoilState<any>(userAddress)
@@ -70,6 +71,7 @@ export function Header({
     if (newAddress != address){
       setAddress(newAddress)
       findUsersnfts(newAddress);
+      findUsersOctavas(newAddress)
     }
   }
   function test() {
@@ -79,6 +81,7 @@ export function Header({
     console.log(address)
     if (address > 2) {
       findUsersnfts(address);
+      findUsersOctavas(address)
       setConnected(true);
       console.log(wallet.getState())
     }
@@ -89,6 +92,7 @@ export function Header({
 
   return (
     <div className="Header">
+      
       <div className="AppName">
         <Link to="/">
           <div onClick={MenuButtonClick}>

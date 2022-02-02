@@ -59,8 +59,14 @@ export function OctavasRenderSmall({pushedseed}:any) {
        var [loading, setloading] = useState(false);
  
      let setup = (p5:any, canvasParentRef:any) => {
-       p5.randomSeed(5110099571014948499997);
-       p5.noiseSeed(5110099571014948499997);
+      pushedseed = (pushedseed.substring(2,66))
+      var asciseed = '';
+      for (var i=0; 8 > i; i++){
+        asciseed += pushedseed.charCodeAt(i);
+      }
+
+       p5.randomSeed(asciseed);
+       p5.noiseSeed(asciseed);
      
        colorbackground = p5.random(BackgroundTypesArray)
  

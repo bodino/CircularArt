@@ -56,7 +56,7 @@ export function LandingPage() {
               CollectionImage={octavian}
               CollectionCreationDate="01/21/2022"
               MaxMint="981"
-              TotalMinted="0"
+              TotalMinted="981"
               AmountGeneratedForPublicGoods=""
             />
 
