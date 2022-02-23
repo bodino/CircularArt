@@ -13,7 +13,7 @@ import { connectedState } from '../state'
 
 
 
-export function Collection({NameOfCollection,CollectionImage,CollectionCreationDate, MaxMint, TotalMinted, AmountGeneratedForPublicGoods}:any) {
+export function Collection({NameOfCollection,CollectionImage,CollectionCreationDate, MaxMint, TotalMinted, AmountGeneratedForPublicGoods, Artist}:any) {
     var [allIsClicked, setAllIsClicked] = useState(true);
 
   return (
@@ -24,7 +24,9 @@ export function Collection({NameOfCollection,CollectionImage,CollectionCreationD
         </div> 
         <div className = "SubTextOfCollection">
           <div> <b> <i>{NameOfCollection}  </i></b>  </div>
+          <div> <i>{Artist}</i> </div>
           <div> {CollectionCreationDate} </div>
+       
           <div>{TotalMinted} / {MaxMint} Minted</div>
 
           {/* <div> {AmountGeneratedForPublicGoods} </div> */}

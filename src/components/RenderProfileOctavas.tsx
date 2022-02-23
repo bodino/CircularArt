@@ -4,17 +4,20 @@ import { useState, useEffect } from 'react'
 import TransferModal from './TransferModal'
 import OctavasRenderSmall from '../renderArt/OctavasRenderSamll' 
 import ClickedOctavasRender from './ClickedOctavasRender'
+import { Octavas } from '../state/collections'
 
 
 export function RenderProfileOctavas({item, wallet}:any) {
- 
+  var [info, setInfo] = useState<any>(Octavas);
+  console.log("hello world")
+  console.log(item);
   return (
 
     <div style={{height:"350px"}}className="FlexIndividualCollection">
-      <div className="UserMarketImg">
-       <OctavasRenderSmall
-       pushedseed ={item[0].SEED.toString()}/>
-        </div>
+   
+       
+      <img className="UserMarketImg" src={info.ipfslink+item[0].ID.toString()+ ".png"}></img>
+    
         <div >
         <b>Octavas {item[0].ID} </b>
         </div>

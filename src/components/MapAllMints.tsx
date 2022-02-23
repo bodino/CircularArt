@@ -10,7 +10,7 @@ import {useRecoilState} from 'recoil'
 export function MapAllMints({isLoading, wallet, info}:any) {
     const [marketArray, setMarketArray] = useRecoilState<any>(marketState)
     let x = new Array ();
-    var [v, setV] = useState(20);
+    var [v, setV] = useState(5);
     var [z, setZ] = useState(0);
     var [array, setarray] = useState(x);
     
@@ -25,7 +25,7 @@ export function MapAllMints({isLoading, wallet, info}:any) {
 
 
     function addtwenty(){
-        setV(v+=20);
+        setV(v+=5);
         for (z; v > z; z++) {
             x[z] = z
         }
@@ -35,9 +35,9 @@ export function MapAllMints({isLoading, wallet, info}:any) {
     }
 
     function minustwenty(){
-        if (v > 20){
-        setV((v+=-20));
-        setZ((z+=-40));
+        if (v > 5){
+        setV((v+=-5));
+        setZ((z+=-10));
         console.log(v)
         console.log(z)
 

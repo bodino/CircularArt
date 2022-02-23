@@ -24,6 +24,7 @@ import octavian from '../art/octavas.png'
 import agustus from '../art/agustus.png'
 import soon from '../art/Unannounced.png'
 import Footer from '../components/Footer'
+import  Connectivity  from '../art/Connectivity.png'
 
 var Eth = require('web3-eth')
 let web3
@@ -32,7 +33,6 @@ var autoSelectWallet = 'metamask'
 
 export function LandingPage() {
   const [allCollections, setallCollections] = useState(true)
-
   return (
     <div className="Menu2">
       <div>
@@ -57,9 +57,18 @@ export function LandingPage() {
               CollectionCreationDate="01/21/2022"
               MaxMint="981"
               TotalMinted="981"
-              AmountGeneratedForPublicGoods=""
+              AmountGeneratedForPublicGoods="24.5 ETH"
+              Artist = "Bodo"
             />
-
+            <Collection
+              NameOfCollection="Connectivity"
+              CollectionImage={Connectivity}
+              CollectionCreationDate="Soon"
+              MaxMint="250"
+              TotalMinted="0"
+              AmountGeneratedForPublicGoods=""
+              Artist = "Tallzy"
+            />
             <Collection
               NameOfCollection="Unannounced"
               CollectionImage={soon}

@@ -2,7 +2,7 @@ import react from 'react'
 
 export const OptiPunks = {
   name: 'OptiPunks',
-  artist: 'LarvaLabs Inspired',
+  artist: 'Bodo',
   date: '11/18/2021',
   total: '10,000',
   minted: '10,000',
@@ -39,5 +39,18 @@ export const Octavas = {
   coverimg: '',
   description: '',
   address: '0xc58c9a631ce193fC3F2Bb190Ab5Ba1BE181c09D1', //change this address to actual address
+  ipfslink: 'https://ipfs.io/ipfs/QmdubuSea3FrptVJNxcwWRyRvmqyUBb4u3KXjNJ7nzg8aK/',
+}
+export const Connectivity= {
+  name: 'Connectivity',
+  artist: 'Tallzy',
+  date: '2/24/2022',
+  total: '250',
+  minted: '0',
+  status: 'Soon',
+  type: 'live',
+  coverimg: '',
+  description: '',
+  address: '', //change this address to actual address
   ipfslink: '',
 }

@@ -26,7 +26,7 @@ export function MiddleBody({setallCollections}:any) {
             Past Collections
         </div>
         <div className="DisapearingText">
-            $216,000 Raised For Public Goods
+            $280,000 Raised For Public Goods
         </div>
         <div className="buttonColor" style={{backgroundColor: allIsClicked ? '' : 'rgb(242, 217, 195)', color: '#A6A6A7'   }} onClick={() => {setAllIsClicked(true); setallCollections(true)}}>
             All Collections

@@ -3,12 +3,14 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Octavasimg from '../art/octavas.png'
+import Connectivityimg from '../art/Connectivity.png'
 import Unannouncedimg from '../art/Unannounced.png'
 import OptiPunksimg from '../art/OptiPunks.png'
 import MapMarkets from './MapMarkets'
 import MapAllMints from './MapAllMints'
 
 import { OptiPunks } from '../state/collections'
+import { Connectivity } from '../state/collections'
 import { Unannounced } from '../state/collections'
 import { Octavas } from '../state/collections'
 import { ethers } from 'ethers'
@@ -17,6 +19,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 import OctavasRender from '../renderArt/OctavasRender'
+import ConnectivityRender from '../renderArt/ConnectivityRender'
 import NftContract from '../contracts/Octavas.json'
 
 
@@ -79,6 +82,9 @@ export function IndividualCollectionPage({wallet}:any) {
     }  else if (id == "Octavas"){
       setRenderNow(Octavasimg);
       setInfo(Octavas);
+    } else if (id == "Connectivity"){
+      setRenderNow(Connectivityimg);
+      setInfo(Connectivity);
     }
 
     
@@ -100,8 +106,11 @@ export function IndividualCollectionPage({wallet}:any) {
       <div style={{ justifyContent: 'center', borderBottom: '0px' }}className="FlexBoxMiddleImage">
         <div style={{ height: '500px',borderRight:"0px"}}className="FlexBoxColum">
           {}
-          {info.type == "live" ? <OctavasRender pushedseed={(Math.random()*1000000000).toString()}/>:<img className="ArtLarge" src={renderNow}></img> }
-          
+          {info.name == "Octavas" ? <OctavasRender pushedseed={(Math.random()*1000000000).toString()}/>:'' }
+          {info.name == "OptiPunks" ? <img className="ArtLarge" src={renderNow}></img> :""}
+          {info.name == "Unannounced" ? <img className="ArtLarge" src={renderNow}></img> :""}
+          {info.name == "Connectivity" ? <ConnectivityRender/> :"" }
+          {/* change to be live generation */}
         </div>
 
         <div
@@ -132,7 +141,10 @@ export function IndividualCollectionPage({wallet}:any) {
               {info.artist}
             </div> */}
             </div>
-           
+            <div className="IndividualText">
+             <div><b>Artist:</b></div>
+             <div> {info.artist}</div>
+            </div>
             <div className="IndividualText">
               <div> <b>Total:</b> </div>
               <div>{info.total}</div>
