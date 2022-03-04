@@ -12,7 +12,7 @@ export function RenderNFT({item, wallet}:any) {
   return (
 
     <div style={{height:"350px"}}className="FlexIndividualCollection">
-        <img className="UserMarketImg" src={info.ipfslink+item.toString()+ ".png"}></img>
+        <img className="UserMarketImg" src={"https://optimarket-imgs.s3.us-east-2.amazonaws.com/QmbAhtqQqiSQqwCwQgrRB6urGc3umTskiuVpgX7FvHhutU/"+item.toString()+ ".png"}></img>
         <div >
         <b>OptiPunk {item} </b>
         </div>

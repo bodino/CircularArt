@@ -14,6 +14,8 @@ export const OptiPunks = {
   address: '0xB8Df6Cc3050cC02F967Db1eE48330bA23276A492',
   ipfslink:
     'https://ipfs.io/ipfs/QmbAhtqQqiSQqwCwQgrRB6urGc3umTskiuVpgX7FvHhutU/',
+    imagerenderlink: 'https://optimarket-imgs.s3.us-east-2.amazonaws.com/QmbAhtqQqiSQqwCwQgrRB6urGc3umTskiuVpgX7FvHhutU/'
+
 }
 export const Unannounced = {
   name: 'Unannounced',
@@ -40,17 +42,20 @@ export const Octavas = {
   description: '',
   address: '0xc58c9a631ce193fC3F2Bb190Ab5Ba1BE181c09D1', //change this address to actual address
   ipfslink: 'https://ipfs.io/ipfs/QmdubuSea3FrptVJNxcwWRyRvmqyUBb4u3KXjNJ7nzg8aK/',
+  imagerenderlink: 'https://optimarket-imgs.s3.us-east-2.amazonaws.com/QmdubuSea3FrptVJNxcwWRyRvmqyUBb4u3KXjNJ7nzg8aK/'
+
 }
 export const Connectivity= {
   name: 'Connectivity',
   artist: 'Tallzy',
   date: '2/24/2022',
-  total: '250',
+  total: '450',
   minted: '0',
-  status: 'Soon',
+  status: 'Active',
   type: 'live',
   coverimg: '',
   description: '',
-  address: '', //change this address to actual address
+  address: '0xD5f027a493848C925fD6984459F72142B42EbBBD', //change this address to actual address
   ipfslink: '',
+  
 }

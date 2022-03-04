@@ -17,7 +17,7 @@ import "p5/lib/addons/p5.scribble";
 
 
 
-export function ConnectivityRender({pushedseed}:any) {
+export function ConnectivityRenderSmall({pushedseed}:any) {
     var [loading, setloading] = useState(false);
 
     let renderAnimation = ( ) => {
@@ -285,10 +285,10 @@ let scribbleLine = ( x1:any, y1:any, x2:any, y2:any, p5:any, bowing:any, roughne
   return (
     <div>
       
-        {!loading ? <Sketch setup={setup} draw={draw} className="ArtLarge" />  : ""}
+        {!loading ? <Sketch setup={setup} draw={draw} className="ArtSmall" />  : ""}
     </div>
     
   )
 }
 
-export default ConnectivityRender
+export default ConnectivityRenderSmall

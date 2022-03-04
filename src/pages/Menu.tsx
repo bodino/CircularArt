@@ -14,7 +14,7 @@ import Web3 from 'web3'
 import { ethers } from 'ethers'
 import Header from '../components/Header'
 import UpperBody from '../components/UpperBody'
-import { connectedState, marketState, octavasState } from '../state'
+import { connectedState, connectivityState, marketState, octavasState } from '../state'
 import MiddleBody from '../components/MiddleBody'
 import Collection from '../components/Collection'
 
@@ -39,6 +39,9 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
   const [connected, setConnected] = useRecoilState<any>(connectedState)
   const [marketArray, setMarketArray] = useRecoilState<any>(marketState)
   const [occtavasArray, setOctavasArray] = useRecoilState<any>(octavasState)
+  const [connectivityArray, setconnectivityArray] = useRecoilState<any>(connectivityState)
+
+
 
   async function logintoWallet() {
     await wallet.walletSelect()
@@ -115,6 +118,42 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
     
   }
 
+  async function findUsersConnectivity(setaddress:any) {
+    let collectibleUpdate = [];
+    let tokenIndex = 0;
+    var tokenId;
+    var seed;
+    var complete = false; 
+    try {
+     while (complete == false) {
+     
+      var ConnectivityDetails = {
+        ID: "",
+        SEED: ""
+      }
+        provider = new ethers.providers.Web3Provider(wallet.getState().wallet.provider)
+        console.log(provider);
+        const contract = new ethers.Contract('0xD5f027a493848C925fD6984459F72142B42EbBBD', OctavasContract.abi, provider ); //change contract address
+        tokenId =  await contract.tokenOfOwnerByIndex(setaddress, tokenIndex);
+        tokenId = tokenId.toNumber();
+        seed = await contract.seeds(tokenId)
+        
+        ConnectivityDetails.SEED = seed;
+        ConnectivityDetails.ID = tokenId; 
+        
+        collectibleUpdate[tokenIndex] = [ConnectivityDetails];
+  
+        tokenIndex++;
+  
+     }
+    } catch (e) {
+      complete = true;
+    }
+    
+    setconnectivityArray(collectibleUpdate);
+    
+  }
+
   return (
     <Router>
       <div className="Menu1">
@@ -125,6 +164,7 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
           setWalletConnected={setWalletConnected}
           findUsersnfts={findUsersnfts}
           findUsersOctavas={findUsersOctavas}
+          findUsersConnectivity={findUsersConnectivity}
         />
         <Routes>
           <Route path="/"  element={<LandingPage/>}/>

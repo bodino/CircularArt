@@ -63,8 +63,8 @@ export function LandingPage() {
             <Collection
               NameOfCollection="Connectivity"
               CollectionImage={Connectivity}
-              CollectionCreationDate="Soon"
-              MaxMint="250"
+              CollectionCreationDate="Live"
+              MaxMint="450"
               TotalMinted="0"
               AmountGeneratedForPublicGoods=""
               Artist = "Tallzy"

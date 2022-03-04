@@ -11,7 +11,7 @@ export function BasicRenderNFT({item, info}:any) {
   return (
 
     <div style={{height:"350px"}}className="FlexIndividualCollection">
-        <img className="UserMarketImg" src={ info.ipfslink+item.toString()+ ".png"}></img>
+        <img className="UserMarketImg" src={ info.imagerenderlink+item.toString()+ ".png"}></img>
         <div >
         <b>{info.name} {item} </b>
         </div>

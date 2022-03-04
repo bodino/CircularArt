@@ -32,11 +32,11 @@ export function IndividualCollectionPage({wallet}:any) {
   
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [mintAmount, setMintAmount] = useState(1)
-
+  
   async function mintNFT() {
       console.log(wallet.getState());
     if (wallet.getState().network == 10){
-    if (mintAmount >= 1 && mintAmount <= 20){
+    if (mintAmount >= 1 && mintAmount <= 10){
       var number = Math.round(5*mintAmount);
       number = number /100
       
@@ -55,7 +55,7 @@ export function IndividualCollectionPage({wallet}:any) {
         toast("Mint TX Has Been Sent")
 
     } else {
-        toast("Max Mint Is 20")
+        toast("Max Mint Is 10")
     }
   } else {toast("Connected To Wrong Network")}
 
@@ -109,7 +109,7 @@ export function IndividualCollectionPage({wallet}:any) {
           {info.name == "Octavas" ? <OctavasRender pushedseed={(Math.random()*1000000000).toString()}/>:'' }
           {info.name == "OptiPunks" ? <img className="ArtLarge" src={renderNow}></img> :""}
           {info.name == "Unannounced" ? <img className="ArtLarge" src={renderNow}></img> :""}
-          {info.name == "Connectivity" ? <ConnectivityRender/> :"" }
+          {info.name == "Connectivity" ? <ConnectivityRender pushedseed={(Math.random()*1000000000).toString()}/> :"" }
           {/* change to be live generation */}
         </div>
 
@@ -121,7 +121,7 @@ export function IndividualCollectionPage({wallet}:any) {
           
             <form onSubmit={handleSubmit}>
             <div style={{borderRight:"0px"}}className="FlexBoxColum">
-            {info.status == "Active" ? <input style={{marginRight:"0px", width:"110px"}} onChange={handleAddressChange} className="ShowOptions" type="number"  max="20" min="1" placeholder="1"/>:""}
+            {info.status == "Active" ? <input style={{marginRight:"0px", width:"110px"}} onChange={handleAddressChange} className="ShowOptions" type="number"  max="10" min="1" placeholder="1"/>:""}
               {info.status == "Soon" ? <div style={{marginRight:"0px"}}className="ShowOptions"> Mint Soon</div> :""}
               
               {info.status == "Active" ? <br/>: ""}

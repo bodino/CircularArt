@@ -3,11 +3,13 @@ import logo from './logo.svg'
 import { useState, useEffect } from 'react'
 import TransferModal from './TransferModal'
 import OctavasRenderSmall from '../renderArt/OctavasRenderSamll' 
-import ClickedOctavasRender from './ClickedOctavasRender'
+import ClickedOctavasRender from './ClickedConnectivityRender'
+import ConnectivityRenderSmall from '../renderArt/ConnectivityRenderSmall'
 import { Octavas } from '../state/collections'
+import ClickedConnectivityRender from './ClickedConnectivityRender'
 
 
-export function RenderProfileOctavas({item, wallet}:any) {
+export function RenderConnectivityProfile({item, wallet}:any) {
   var [info, setInfo] = useState<any>(Octavas);
   console.log("hello world")
   console.log(item);
@@ -16,12 +18,15 @@ export function RenderProfileOctavas({item, wallet}:any) {
     <div style={{height:"350px"}}className="FlexIndividualCollection">
    
        
-      <img className="UserMarketImg" src={info.imagerenderlink+item[0].ID.toString()+ ".png"}></img>
+ 
+      <ConnectivityRenderSmall
+      pushedseed={item[0].SEED.toString()}
+      />
     
         <div >
-        <b>Octavas {item[0].ID} </b>
+        <b>Connectivity {item[0].ID} </b>
         </div>
-        <ClickedOctavasRender
+        <ClickedConnectivityRender
         item={item[0].ID}
         seed={item[0].SEED.toString()}
         />
@@ -34,4 +39,4 @@ export function RenderProfileOctavas({item, wallet}:any) {
   )
 }
 
-export default RenderProfileOctavas
+export default RenderConnectivityProfile

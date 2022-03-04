@@ -18,6 +18,11 @@ export const octavasState = atom<any>({
     default: []
 })
 
+export const connectivityState = atom<any>({
+    key: "connectivityState",
+    default: []
+})
+
 export const isItLoading = atom<any>({
     key: "isLoading",
     default: true

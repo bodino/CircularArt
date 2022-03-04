@@ -10,6 +10,7 @@ import {
 import { connectedState, userAddress } from '../state'
 import MapMarkets from './MapMarkets'
 import MapOctavas from './MapOctavas'
+import MapConnectivity from './MapConnectivity'
 
 import { useState, useEffect } from 'react'
 import makeBlockie from 'ethereum-blockies-base64';
@@ -26,8 +27,11 @@ export function ProfilePage({wallet}:any) {
 
     const [loadOptiPunks, setloadOptiPunks] = useState(true);
     const [loadOctavas, setloadOctavas] = useState(true);
+    const [loadConnectivity, setloadConnectivity] = useState(true);
+
     const [loadAllArt, setloadAllArt] = useState(true);
 
+    const [loadConnectivityblack, setloadConnectivityblack] = useState(false);
     const [loadOctavasblack, setloadOctavasblack] = useState(false);
     const [loadOptiPunksblack, setloadOptiPunksblack] = useState(false);
 
@@ -35,10 +39,13 @@ export function ProfilePage({wallet}:any) {
 
     function loadAll(){
       setloadOctavas(true)
+      setloadConnectivity(true)
       setloadOptiPunks(true)
       setloadAllArt(true)
       setloadOptiPunksblack(false)
       setloadOctavasblack(false)
+      setloadConnectivityblack(false)
+      setloadConnectivity(false)
     }
 
     function loadOptiPunksOnly(){
@@ -47,6 +54,8 @@ export function ProfilePage({wallet}:any) {
       setloadAllArt(false)
       setloadOptiPunksblack(true)
       setloadOctavasblack(false)
+      setloadConnectivityblack(false)
+      setloadConnectivity(false)
     }
 
     function loadOctavasOnly(){
@@ -55,6 +64,18 @@ export function ProfilePage({wallet}:any) {
       setloadAllArt(false)
       setloadOptiPunksblack(false)
       setloadOctavasblack(true)
+      setloadConnectivityblack(false)
+      setloadConnectivity(false)
+    }
+
+    function loadConnectivityOnly(){
+      setloadOctavas(false)
+      setloadOptiPunks(false)
+      setloadAllArt(false)
+      setloadOptiPunksblack(false)
+      setloadOctavasblack(false)
+      setloadConnectivityblack(true)
+      setloadConnectivity(true)
     }
 
 
@@ -99,11 +120,16 @@ export function ProfilePage({wallet}:any) {
         <div style={{backgroundColor: loadOctavasblack ? 'black' : '', color: loadOctavasblack ? 'white' : ''      }} className="ShowOptions" onClick={loadOctavasOnly}>
       Octavas
         </div>
+        <br/>
+        <div style={{backgroundColor: loadConnectivityblack ? 'black' : '', color: loadConnectivityblack ? 'white' : ''      }} className="ShowOptions" onClick={loadConnectivityOnly}>
+      Connectivity
+        </div>
     </div>
     </div>
     <div style={{ height: "calc(100vh - 200px)", borderTop:'0px'}} className="AllProfileCollectionFlexBox">
       {loadOptiPunks ? <MapMarkets wallet={wallet}/>: ""}
        {loadOctavas ? <MapOctavas wallet={wallet}/> : ""}
+       {loadConnectivity ? <MapConnectivity wallet={wallet}/> : ""}
        
     </div>
    
